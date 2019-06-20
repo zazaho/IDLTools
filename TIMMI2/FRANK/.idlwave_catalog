@@ -1,0 +1,10 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("naast" fun nil (lib "naast.pro" nil "sacha") "Result = %s(img_in1, img_in2)" (nil ("show")))
+   ("tvs" pro nil (lib "tvs.pro" nil "sacha") "%s, img_in, maxfact" (nil))
+   ("adding" fun nil (lib "adding.pro" nil "sacha") "Result = %s(img_in)" (nil ("autom") ("glad") ("nostep") ("posneg") ("size") ("stepx") ("stepy")))))

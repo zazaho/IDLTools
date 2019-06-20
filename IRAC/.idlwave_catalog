@@ -1,0 +1,16 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("atrou_hd" fun nil (lib "atrou_hd.pro" nil "sacha") "Result = %s(map, nscale)" (nil))
+   ("decompose_image_atrou" pro nil (lib "decompose_image_atrou.pro" nil "sacha") "%s, file_in" (nil ("norm") ("shotnoise") ("smallscalescutoff")))
+   ("lmode" fun nil (lib "do_pulldown.pro" nil "sacha") "Result = %s(data)" (nil))
+   ("literstat" pro nil (lib "do_pulldown.pro" nil "sacha") "%s, data, out" (nil ("lower") ("maxiter") ("nsigrej") ("silent") ("upper")))
+   ("fpulldown" fun nil (lib "do_pulldown.pro" nil "sacha") "Result = %s(image, header)" (nil ("BOXCARSIZE") ("DISPLAY") ("HELP") ("HSIG") ("LSIG") ("NOFOWLER") ("OBJCLIP") ("TITLE") ("VERBOSE") ("WRITE")))
+   ("do_pulldown" pro nil (lib "do_pulldown.pro" nil "sacha") "%s, filelist" (nil))
+   ("check_decompose_image_atrou" pro nil (lib "check_decompose_image_atrou.pro" nil "sacha") "%s, file_in" (nil))
+   ("plseds" pro nil (lib "plseds.pro" nil "sacha") "%s, s_in" (nil ("_extra") ("coord") ("fit") ("index")))
+   ("read_fipac" fun nil (lib "read_fipac.pro" nil "sacha") "Result = %s(filename)" (nil ("columns") ("help") ("use_position")))))

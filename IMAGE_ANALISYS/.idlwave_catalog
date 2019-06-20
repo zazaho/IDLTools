@@ -1,0 +1,12 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("oplot_aper" pro nil (lib "oplot_aper.pro" nil "sacha") "%s, in, band, radec, size" (nil ("_extra")))
+   ("coord2pix" fun nil (lib "coord2pix.pro" nil "sacha") "Result = %s(radec_c, scale, radec)" (nil))
+   ("sh_aper" fun nil (lib "sh_aper.pro" nil "sacha") "Result = %s(instruct, band)" (nil))
+   ("show_apers" pro nil (lib "show_apers.pro" nil "sacha") "%s, ima, aar, center, size" (nil ("_extra")))
+   ("get_profile" fun nil (lib "get_profile.pro" nil "sacha") "Result = %s(img_in)" (nil ("background") ("center") ("flux") ("fwhm") ("object") ("pixelsize")))))

@@ -1,0 +1,48 @@
+function sh_bb,aar,temp,pindex,norm=norm
+  
+;
+; blackbody flux in Jy
+;
+; c = 2.9979E10
+; h = 6.6262E-27   (erg s)
+; k = 1.3807E-16   (erg/K)
+;
+; bb = 2h/c^2 * v^3 * (1/exp(hv/(kT))-1)
+;    = c1 * v^3 * (1/exp(h*c/(wkT))-1)
+;    = c1 * v^3 * (1/exp(c2/(wT))-1)
+;
+;      c1 = 2h/c^2
+;      c2 = hc/k
+;
+;(SH Jan 27 1999)
+;wavelength dependent emissivity powerindex:power
+; fit = bb(T)*H*l**power
+  
+  default,pindex,0
+  out = aar
+  wave = aar.data.wave
+  
+ w = double(wave/1.E4)		; wave in microns, w in cm
+
+ c1 = 1.4745526                 ; 2*h/c^2 (act. 1.4745524e-47)
+ c2 = 1.4387402 		; h*c/k
+ c2 = 1.43874
+
+ teller  = exp(c2/(w*temp)) - 1
+
+ v = 2.9979 / wave		; of order 1 (omit E14)
+ noemer = c1 * v^3              ; factor 1.E-5
+                                ; E-47 (c1) E(3*(10+4)) (c and wave)
+                                ; omitted because VMS does not use IEEE math 
+                                ; and will otherwise crash
+;(SH Jan 27 1999)
+ noemer = noemer * wave^pindex
+ 
+ bbflux = noemer / teller
+ if (n_elements(norm) eq 2) then BEGIN
+   bbflux = bbflux * norm(1)/(shc_interpol(wave,bbflux,norm(0)))(0)
+ endif
+ 
+ out.data.flux = bbflux
+ return,out
+end 

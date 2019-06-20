@@ -1,0 +1,10 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("flatten_cube" pro nil (lib "flatten_cube.pro" nil "sacha") "%s, cubein, cubeout" (nil ("degree") ("width")))
+   ("hot_pixels" fun nil (lib "hot_pixels.pro" nil "sacha") "Result = %s(image)" (nil ("threshold") ("width")))
+   ("find_bad_bcds" pro nil (lib "find_bad_bcds.pro" nil "sacha") "%s, files" (nil ("path")))))

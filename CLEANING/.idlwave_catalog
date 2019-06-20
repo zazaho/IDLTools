@@ -1,0 +1,19 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("sh_cutbands" fun nil (lib "sh_cutbands.pro" nil "sacha") "Result = %s(in)" (nil))
+   ("aci" fun nil (lib "aci.pro" nil "sacha") "Result = %s(in)" (nil ("_extra") ("line") ("noguess")))
+   ("cutlines" fun nil (lib "cutlines.pro" nil "sacha") "Result = %s(in)" (nil ("base") ("level") ("res")))
+   ("jb_cut" fun nil (lib "jb_cut.pro" nil "sacha") "Result = %s(lin)" (nil ("edges")))
+   ("aar_clean_itk" fun nil (lib "aar_clean_itk.pro" nil "sacha") "Result = %s(in)" (nil ("_extra") ("name") ("xrange") ("yrange")))
+   ("marc" fun nil (lib "marc.pro" nil "sacha") "Result = %s(in)" (nil ("_extra") ("name")))
+   ("sca" fun nil (lib "sca.pro" nil "sacha") "Result = %s(a)" (nil ("_extra")))
+   ("aar_clean" fun nil (lib "aar_clean.pro" nil "sacha") "Result = %s(aar)" (nil))
+   ("sh_weg" fun nil (lib "sh_weg.pro" nil "sacha") "Result = %s(in)" (nil ("bands") ("box") ("det") ("diff") ("ditk") ("downdet") ("itk") ("tint") ("updet")))
+   ("sh_cut" fun nil (lib "sh_cut.pro" nil "sacha") "Result = %s(ain)" (nil ("edges")))
+   ("sh_aardiff" pro nil (lib "sh_aardiff.pro" nil "sacha") "%s, old, new" (nil ("filename") ("name")))
+   ("sh_cleanaar" fun nil (lib "sh_cleanaar.pro" nil "sacha") "Result = %s(aar)" (nil ("_extra") ("band") ("name") ("scan") ("xmode") ("ymode")))))

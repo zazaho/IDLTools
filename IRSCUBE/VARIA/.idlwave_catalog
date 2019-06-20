@@ -1,0 +1,15 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("pah_pacs100" pro nil (lib "pah_pacs100.pro" nil "sacha") "%s, im1, im2" (nil ("_extra")))
+   ("pah_add_ratio_error" fun nil (lib "pah_add_ratio_error.pro" nil "sacha") "Result = %s(struct)" (nil ("a") ("b")))
+   ("pah_rimbinbin" fun nil (lib "pah_rimbinbin.pro" nil "sacha") "Result = %s(x, y)" (nil ("nxbins") ("nybins") ("ymax") ("ymin")))
+   ("pah_makeratios" fun nil (lib "pah_makeratios.pro" nil "sacha") "Result = %s(in_struct)" (nil ("denominators") ("nominators")))
+   ("pah_median_experiment" fun nil (lib "pah_median_experiment.pro" nil "sacha") "Result = %s(struct)" (nil ("a") ("b") ("fixed_count_slicer") ("idx") ("log_slicer") ("max_slicer") ("min_slicer") ("nslicer") ("slicer")))
+   ("pah_spatialaverage" fun nil (lib "pah_spatialaverage.pro" nil "sacha") "Result = %s(map)" (nil))
+   ("pah_readdata" fun nil (lib "pah_readdata.pro" nil "sacha") "Result = %s" (nil ("measurements") ("mlabels") ("region") ("rlabel") ("ulabels")))
+   ("pah_center" pro nil (lib "pah_center.pro" nil "sacha") "%s, files" (nil))))

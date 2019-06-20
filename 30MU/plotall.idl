@@ -1,0 +1,5 @@
+@readfaar_p10.idl
+sh_ps,/a4land,'all.ps'
+!p.multi=[0,2,2]
+for i=0,n_elements(allsorts)-1 do foo=execute('pl,/white,xr=[15,45],/bands,/autoy,nsum=3,'+allsorts[i])
+sh_ps,/view

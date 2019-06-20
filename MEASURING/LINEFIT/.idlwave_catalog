@@ -1,0 +1,17 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("contlineint3" fun nil (lib "contlineint3.pro" nil "sacha") "Result = %s" (nil ("FILE")))
+   ("lineint" fun nil (lib "lineint.pro" nil "sacha") "Result = %s(aar)" (nil ("OLDDATA") ("XRANGE")))
+   ("dbfluxint" pro nil (lib "dbfluxint.pro" nil "sacha") "%s, aar, xrange, n" (nil))
+   ("sh_line" fun nil (lib "sh_line.pro" nil "sacha") "Result = %s(in)" (nil ("CONT") ("flambda") ("nocomment") ("OLDDATA") ("XRANGE")))
+   ("lineintlambda" fun nil (lib "lineintlambda.pro" nil "sacha") "Result = %s(aar)" (nil ("CONT") ("OLDDATA") ("XRANGE")))
+   ("sh_getlineflux" fun nil (lib "sh_getlineflux.pro" nil "sacha") "Result = %s(aar)" (nil ("velzero") ("xrange")))
+   ("lineint_simple" fun nil (lib "lineint_simple.pro" nil "sacha") "Result = %s(wavelngth, flux)" (nil ("CONT") ("OLDDATA") ("XRANGE")))
+   ("lineint3" fun nil (lib "lineint3.pro" nil "sacha") "Result = %s(aar)" (nil ("CONT") ("OLDDATA") ("XRANGE")))
+   ("lineint4" fun nil (lib "lineint4.pro" nil "sacha") "Result = %s(aar)" (nil ("CONT") ("OLDDATA") ("XRANGE")))
+   ("sh_line_simple" fun nil (lib "sh_line_simple.pro" nil "sacha") "Result = %s(in)" (nil ("CONT") ("HELP") ("QUIET") ("XRANGE")))))

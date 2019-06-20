@@ -1,0 +1,32 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("regriddatacube" pro nil (lib "regriddatacube.pro" nil "sacha") "%s, data, unc, brightmask" (nil ("factor") ("rebinneddata") ("rebinnedunc") ("status")))
+   ("shrink_cube" fun nil (lib "shrink_cube.pro" nil "sacha") "Result = %s(file)" (nil ("clean") ("writefile")))
+   ("conv_cube_convolve_image" fun nil (lib "conv_cube.pro" nil "sacha") "Result = %s(img, himg_in, convolutionkernel, convolutionkernelpixelsize)" (nil))
+   ("conv_cube_create_convolutionkernel" fun nil (lib "conv_cube.pro" nil "sacha") "Result = %s(psfname, psfrefname)" (nil ("fftpsfref") ("hanning") ("nyquistthreshold") ("psfreffwhm") ("psfthreshold")))
+   ("conv_cube_create_gaussian_convolutionkernel" fun nil (lib "conv_cube.pro" nil "sacha") "Result = %s(psfrefname)" (nil ("kernelfwhm")))
+   ("conv_cube_create_stinytim_parfile" pro nil (lib "conv_cube.pro" nil "sacha") "%s" (nil ("instrument") ("pixelsize") ("psfsize") ("wave")))
+   ("conv_cube_create_stinytim_psf" pro nil (lib "conv_cube.pro" nil "sacha") "%s" (nil ("instrument") ("outname") ("pixelsize") ("psfsize") ("wavelength")))
+   ("conv_cube_create_cubism_psf" pro nil (lib "conv_cube.pro" nil "sacha") "%s" (nil ("instrument") ("outname") ("pixelsize") ("psfsize") ("wavelength")))
+   ("conv_cube" fun nil (lib "conv_cube.pro" nil "sacha") "Result = %s(cubename, psfrefname)" (nil ("_extra") ("besensible") ("createpsfref") ("help") ("instrument") ("keeppsf") ("kerneldirname") ("nyquistthreshold") ("outfitsfilename") ("pixelsize") ("psfdirname") ("psfmode") ("psfsize") ("psfthreshold") ("recreateconvolutionkernel")))
+   ("diagnose_cube_DisplayNew" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, sInfo" (nil))
+   ("diagnose_cube_Cleanup" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, wTopBase" (nil))
+   ("diagnose_cube_scale" fun nil (lib "diagnose_cube.pro" nil "sacha") "Result = %s(image)" (nil))
+   ("diagnose_cube_MakeScaling" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, sInfo" (nil))
+   ("diagnose_cube_Display" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, WindowID, Image" (nil))
+   ("diagnose_cube_refresh" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, sInfo" (nil ("dimage") ("scale")))
+   ("diagnose_cube_DisplayOverlay" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, sInfo" (nil))
+   ("diagnose_cube_LoadCT" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, sInfo" (nil))
+   ("diagnose_cube_PlotSpectrum" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, sInfo" (nil))
+   ("diagnose_cube_Event" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, sEvent" (nil))
+   ("diagnose_cube" pro nil (lib "diagnose_cube.pro" nil "sacha") "%s, InStr" (nil ("absolute") ("colortable") ("max") ("min") ("name") ("nan") ("no_block") ("out") ("resize") ("usemask")))
+   ("mergestep" pro nil (lib "mergestep.pro" nil "sacha") "%s, s1, s2" (nil ("factor")))
+   ("convolve_for_conv_cube" fun nil (lib "convolve_for_conv_cube.pro" nil "sacha") "Result = %s(image, psf)" (nil ("AUTO_CORRELATION") ("CORRELATE") ("FT_IMAGE") ("FT_PSF") ("NO_FT")))
+   ("shrinkcube" fun nil (lib "shrinkcube.pro" nil "sacha") "Result = %s(file)" (nil ("clean") ("writefile")))
+   ("combine_cubes_rebin" fun nil (lib "combine_cubes.pro" nil "sacha") "Result = %s(flux, wave, newwave)" (nil ("isrms") ("sigma")))
+   ("combine_cubes" fun nil (lib "combine_cubes.pro" nil "sacha") "Result = %s(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10)" (nil ("debug") ("diagnostics") ("fitsout") ("keepedge") ("pixelsize") ("treatsasrms") ("writefits")))))

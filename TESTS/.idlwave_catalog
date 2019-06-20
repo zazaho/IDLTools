@@ -1,0 +1,13 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("non_crashing_widget_event" pro nil (lib "crashing_widget.pro" nil "sacha") "%s, ev" (nil))
+   ("non_crashing_widget" pro nil (lib "crashing_widget.pro" nil "sacha") "%s" (nil))
+   ("crashing_widget_event" pro nil (lib "crashing_widget.pro" nil "sacha") "%s, ev" (nil))
+   ("crashing_widget" pro nil (lib "crashing_widget.pro" nil "sacha") "%s" (nil))
+   ("islands" fun nil (lib "islands.pro" nil "sacha") "Result = %s(x, y, max_allowed_distance)" (nil))
+   ("doco" pro nil (lib "doco.pro" nil "sacha") "%s, name" (nil))))

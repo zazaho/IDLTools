@@ -1,0 +1,21 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("sh_mie" fun nil (lib "sh_mie.pro" nil "sacha") "Result = %s(r_in, lnk)" (nil ("aar_out")))
+   ("Mie_single" pro nil (lib "mie_single.pro" nil "sacha") "%s, Dx, Cm, Dqxt, Dqsc, Dqbk, Dg, Xs1, Xs2, Dph" (nil ("dlm") ("Dqv")))
+   ("cme" fun nil (lib "cme.pro" nil "sacha") "Result = %s(ax1, ax2, lnk_1, lnk_2)" (nil ("_extra")))
+   ("c_abs" fun nil (lib "c_abs.pro" nil "sacha") "Result = %s(R_in, lnk_in)" (nil ("aar_out") ("cde") ("disk") ("needle") ("sphere")))
+   ("core_mantle" fun nil (lib "core_mantle.pro" nil "sacha") "Result = %s(R_1, R_2, lnk_1, lnk_2)" (nil ("aar_out") ("volume")))
+   ("cme_L_INT" fun nil (lib "core_mantle_ellipsoid.pro" nil "sacha") "Result = %s(q)" (nil))
+   ("cme_L" fun nil (lib "core_mantle_ellipsoid.pro" nil "sacha") "Result = %s(i, k)" (nil))
+   ("cme_nu" fun nil (lib "core_mantle_ellipsoid.pro" nil "sacha") "Result = %s" (nil))
+   ("cme_f" fun nil (lib "core_mantle_ellipsoid.pro" nil "sacha") "Result = %s" (nil))
+   ("cme_alpha" fun nil (lib "core_mantle_ellipsoid.pro" nil "sacha") "Result = %s(i)" (nil))
+   ("core_mantle_ellipsoid" fun nil (lib "core_mantle_ellipsoid.pro" nil "sacha") "Result = %s(ax1, ax2, lnk_1, lnk_2)" (nil ("aar_out") ("volume")))
+   ("tauc" fun nil (lib "tauc.pro" nil "sacha") "Result = %s" (nil ("B") ("Eg") ("Erange") ("lrange") ("nsteps") ("tauc")))
+   ("sim_spec" fun nil (lib "sim_spec.pro" nil "sacha") "Result = %s(p1_in, p2, p3, p4)" (nil ("_extra") ("abs") ("cme") ("cms") ("fact") ("nonorm") ("resample") ("simcmcde") ("tau") ("temp")))
+   ("c_lorentz" fun nil (lib "c_lorentz.pro" nil "sacha") "Result = %s(osc, eps_inf)" (nil ("aar") ("k") ("l") ("n") ("R") ("step") ("xrange")))))

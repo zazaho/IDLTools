@@ -1,0 +1,15 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("etacar" pro nil (lib "etacar.pro" nil "sacha") "%s" (nil))
+   ("do_geometry" pro nil (lib "etacar.pro" nil "sacha") "%s, state" (nil))
+   ("setup_hello_event" pro nil (lib "etacar.pro" nil "sacha") "%s, sevent" (nil))
+   ("do_plot" pro nil (lib "etacar.pro" nil "sacha") "%s, state" (nil))
+   ("warn" pro nil (lib "etacar.pro" nil "sacha") "%s, text" (nil))
+   ("info" pro nil (lib "etacar.pro" nil "sacha") "%s, text" (nil))
+   ("normvect" fun nil (lib "etacar.pro" nil "sacha") "Result = %s(v)" (nil))
+   ("rotate_vectors" pro nil (lib "etacar.pro" nil "sacha") "%s, v1, v2, incl, theta" (nil ("v1new") ("v2new")))))

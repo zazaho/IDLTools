@@ -1,0 +1,25 @@
+;; global variable that are used inside many routines of the
+;; grid calculations and display
+
+d_LMC = 55.0 ;; kpc
+d_SMC = 60.0 ;; kpc
+pixelsize = 0.05 ;; arcsec
+npixels = 6500L
+
+;; the string that separates the parameter name from its value in the
+;; directory names
+par_val_seperator = ':'
+
+calculate_command = 'calc_acf'
+
+read_command = 'read_acf'
+read_batch_filename = 'readfiles.idl'
+
+catalogfile_prefix = 'catalog'
+
+acffile_prefix = 'acf'
+acf_annulistep=0
+acf_dolog=1
+acf_annuli_min=1.
+acf_annuli_max=200.
+acf_nannuli=21

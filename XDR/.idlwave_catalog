@@ -1,0 +1,9 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("savexdr" pro nil (lib "savexdr.pro" nil "sacha") "%s, p0" (nil ("_extra") ("bzip2") ("filename")))
+   ("restorexdr" fun nil (lib "restorexdr.pro" nil "sacha") "Result = %s(filename)" (nil ("status")))))

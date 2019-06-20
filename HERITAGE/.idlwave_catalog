@@ -1,0 +1,12 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("fitslope" fun nil (lib "fitslope.pro" nil "sacha") "Result = %s(wave, flux)" (nil))
+   ("findoffset_totalslope" fun nil (lib "findoffsets.pro" nil "sacha") "Result = %s(P)" (nil))
+   ("findoffsets" fun nil (lib "findoffsets.pro" nil "sacha") "Result = %s(i250, i350, i500)" (nil))
+   ("fittemp" fun nil (lib "fittemp.pro" nil "sacha") "Result = %s(wave, flux)" (nil ("_extra")))
+   ("gaussconv" fun nil (lib "gaussconv.pro" nil "sacha") "Result = %s(i, fwhm)" (nil ("_extra") ("header") ("help") ("noclean") ("platescale") ("psf") ("threshold")))))

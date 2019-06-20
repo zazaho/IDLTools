@@ -1,0 +1,11 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("fit28_model_spectrum" fun nil (lib "fit28.pro" nil "sacha") "Result = %s(par)" (nil))
+   ("fit28_deviation" fun nil (lib "fit28.pro" nil "sacha") "Result = %s(par)" (nil))
+   ("fit28_quantify_parameter_distribution" fun nil (lib "fit28.pro" nil "sacha") "Result = %s(in_par)" (nil))
+   ("fit28" fun nil (lib "fit28.pro" nil "sacha") "Result = %s(cubename, uncertaintycubename)" (nil ("initial_pars") ("initial_scale") ("nperturb") ("plot") ("wrange")))))

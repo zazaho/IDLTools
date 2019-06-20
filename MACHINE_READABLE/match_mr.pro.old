@@ -1,0 +1,269 @@
+;+
+; NAME:
+;  match_mr.pro
+;
+; PURPOSE:
+;  Given two machine readable tables it will find positional (ra,dec)
+;  coincidences and join the two tables where these coincidences occur
+;  thus allowing to merge two tables with data from different sources 
+;
+; CATEGORY:
+;  STRUCTURE MANIPULATION
+;
+; CALLING SEQUENCE:
+;  matched = match_mr(tab1,tab2 
+;     [,colums1=columns1,columns2=columns2,
+;      max_dist=max_dist,multiple=multiple,keep1=keep1,keep2=keep2,keepall=keepall,
+;      shift=shift,sigma=sigma])
+;
+; INPUTS:
+;  tab1,tab2: Machine readable tables that contain positions.
+;
+; KEYWORD PARAMETERS:
+;  /help: if set show the help
+;  columns1,columns2: array(s) of columns from the tables that should be used
+;    as positions eq ['ra','dec'] or [[1,2,3],[12,13,14]] where the
+;    latter indicates that [1,2,3] form the RA. Some special forms are
+;    allowed: 
+;    missing = ['RA','DEC'] (default)
+;    'radec' = ['RA','DEC']
+;    'deg' = ['RAdeg','DEdeg']
+;    'sex' = [['RAh','RAm','RAs'],['DEd','DEm','DEs']]
+;    Note that [['RAh','RAm','RAs'],['DEdeg']] is not allowed by IDL.
+;    Use [['RAh','RAm','RAs'],['DEdeg','','']] or
+;    Use [[1,2,3],[25,-1,-1]] instead
+;  max_dist = maximum distance (arcsec) to be considered a match (1 default)
+;  /multiple: if set return all matches not only the closest one
+;  /keep1: if set keep the records from table 1 even if they are not matched
+;  /keep2: if set keep the records from table 2 even if they are not matched
+;  /keepall: if set keep the records from table 1 and 2 even if they are not matched
+;  /shift: if set determine the median shift (position angle and
+;    distance) between the sources from table 2 towards table 1
+;    and use this shift prior to doing the final matching.
+;    sigma = sigma. The number of sigmas to from each other to be
+;    considered a match
+;
+; EXAMPLE:
+;  matched = match_mr(tab1,tabl)
+;      or
+;  matched = match_mr(tab1,tabl,columns1='deg',columns2=['ra','decli'])
+;   
+; MODIFICATION HISTORY:
+;  Version 1:
+;  (SH Jul 22 2005)
+;-
+
+FUNCTION match_mr,tab1,tab2,colums1=columns1,columns2=columns2, $
+                  max_dist=mdist,multiple=multi,keep1=keep1,keep2=keep2, $
+                  keepall=keepall,shift=shift,sigma=sigma,help=help
+  
+;; some reasonable defaults for the keyword parameters  
+  default,columns1,['RA','DEC']
+  default,columns2,['RA','DEC']
+  default,mdist,1 ;; arcsec
+  default,multi,0
+
+  default,keep1,0
+  default,keep2,0
+  IF keyword_set(keepall) THEN BEGIN
+      keep1 = 1
+      keep2 = 1
+  endif
+
+  default,shift,0
+  default,sigma,0
+  
+;; Now we do the hardest thing of this routine: Reading the columns from the respective
+;; tables that hold the position info:
+
+  ;; do this for both tables:
+  FOR i =1,2 DO BEGIN
+      foo = execute('cols = columns'+strcompress(string(i),/remove_all))
+      foo = execute('tab = tab'+strcompress(string(i),/remove_all))
+      
+      ctype = size(cols,/tname)
+      cdims = size(cols,/dimensions)
+      IF ctype EQ 'STRING' THEN BEGIN
+          cols = strupcase(cols)
+          IF cdims EQ 1 THEN BEGIN
+              CASE cols OF 
+                  'RADEC': BEGIN
+                      cols = ['RA','DEC']
+                      cdims = 2
+                  END
+                  'DEG': BEGIN
+                      cols = ['RAdeg','DEdeg']
+                      cdims = 2
+                  END
+                  'SEX': BEGIN
+                      cols = [['RAh','RAm','RAs'],['DEd','DEm','DEs']]
+                      cdims = 6
+                  END
+                  'ELSE': BEGIN
+                  END
+              ENDCASE
+          ENDIF
+      ENDIF
+      
+      CASE cdims OF
+;; This would require some error checking on the output of col_mr
+          2: BEGIN
+              ra = col_mr(tab,cols[0])
+              de = col_mr(tab,cols[1])
+          END
+          6: BEGIN
+              IF (((ctype EQ 'STRING') AND (cols[1] NE '')) OR (cols[1] NE -1)) THEN BEGIN
+                  rah = col_mr(tab,cols[0])
+                  rah = col_mr(tab,cols[1])
+                  rah = col_mr(tab,cols[2])
+                  ra = 15d0*(rah+ram/60d0+ras/3600d0)
+              ENDIF ELSE BEGIN
+                  ra = col_mr(tab,cols[0])
+              ENDELSE
+              
+              IF (((ctype EQ 'STRING') AND (cols[3] NE '')) OR (cols[3] NE -1)) THEN BEGIN
+                  ded = col_mr(tab,cols[3])
+                  dem = col_mr(tab,cols[4])
+                  des = col_mr(tab,cols[5])
+                  de = ([-1,1])[ded LT 0d0] * (abs(ded)+dem/60d0+des/3600d0)
+              ENDIF ELSE BEGIN
+                  de = col_mr(tab,cols[3])
+              ENDELSE
+          END
+          ELSE: BEGIN
+              message,'the format of the column'+string(i)+' is not correct',/inform
+              help = 1
+
+              ra = 0
+              de = 0
+          END
+      ENDCASE
+      
+      foo = execute('ra'+strcompress(string(i),/remove_all)+'=ra')
+      foo = execute('de'+strcompress(string(i),/remove_all)+'=de')
+  ENDFOR
+
+;; Only print the usage info and return if asked for help
+  IF keyword_set(help) THEN BEGIN
+      doc_library,'match_mr'
+      return,0
+  ENDIF
+
+
+  DO_MATCHING:
+;; make a dummy array to hold the pair of matching indices
+  
+  iarr   = [-1,-1]
+  
+  FOR i = 0L,n_elements(ra1)-1L DO BEGIN
+      
+      ;; calculate the distance to each source in tab2 in arcsecs
+      dist = sqrt( ((ra2-ra1[i])*cos(!dpi/180d0*(de2+de1[i])/2d0))^2d0+ $
+                   (de2-de1[i])^2d0 )*3600d0
+      
+      ;; find the matching source
+      matches = where(dist LE mdist,count)
+      
+      CASE count OF
+          0: BEGIN
+              IF (keep1 NE 0) THEN BEGIN
+                  iarr = [[iarr],[i,-1]]
+              ENDIF
+          END
+          1: BEGIN
+              iarr = [[iarr],[i,matches]]
+          END
+          ELSE: BEGIN
+              IF (multi EQ 0) THEN BEGIN
+                  iarr = [[iarr],[i,matches[0]]]
+              ENDIF ELSE BEGIN
+                  FOR j = 0,count-1 DO BEGIN
+                      iarr = [[iarr],[i,matches[j]]]
+                  ENDFOR
+              ENDELSE
+          END
+      ENDCASE
+  ENDFOR
+
+;; now make sure that the missing elements from mr2 are also include
+;; incase of keep2 = 1
+  IF (keep2  NE 0) THEN BEGIN
+      all = make_array(n_elements(ra2),val=0)
+      matched = iarr[1,*]
+      all[matched] = 1
+      unmatched = where(all EQ 0)
+      
+      FOR i = 0,n_elements(unmatched)-1 DO BEGIN
+          iarr = [[iarr],[-1,unmatched[i]]]
+      ENDFOR
+      
+  ENDIF
+
+  ;; strip the first bogus element
+  IF n_elements(iarr[0,*]) GT 1 THEN BEGIN
+      iarr = iarr[*,1:*]
+  ENDIF ELSE BEGIN
+      message,'Not a single match was found',/inform
+      return,0
+  ENDELSE
+
+  ;; Do we want to optimise the matching by shifting the positions
+  ;; in tab2?
+  IF (shift NE 0) THEN BEGIN
+      
+      ;; matching source array:
+      marr = iarr[*,where((iarr[0,*] NE -1) AND (iarr[1,*] NE -1))]
+      deltax = (ra2[marr[1,*]]-ra1[marr[0,*]])*cos(!dpi/180d0*(de2[marr[1,*]]+de1[marr[0,*]])/2d0)
+      deltay = de2[marr[1,*]]-de1[marr[0,*]]
+      
+      ;; The median value of the displacements
+      shiftx = median(deltax)
+      shifty = median(deltay)
+      
+      message,'applying a shift in ra,de of: '+ $
+              string(shiftx*3600)+string(shifty*3600)+' in arcsec',/inform
+      ;; Apply this shift to the coordinates of tab2
+      ra2 = ra2 - shiftx/cos(!dpi/180d0*de2)
+      de2 = de2 - shifty
+
+
+      IF keyword_set(sigma) THEN BEGIN
+
+          ;; matching source array:
+          marr = iarr[*,where((iarr[0,*] NE -1) AND (iarr[1,*] NE -1))]
+          deltax = (ra2[marr[1,*]]-ra1[marr[0,*]])*cos(!dpi/180d0*(de2[marr[1,*]]+de1[marr[0,*]])/2d0)
+          deltay = de2[marr[1,*]]-de1[marr[0,*]]
+          
+          dist = sqrt(deltax^2d0+deltay^2d0)*3600d0
+          ;; calculate the STDEV in arcsec (this should be done better
+          ;; maybe a gauss fit to the 
+          
+          ;; Make histrogram of the distances
+          mindist=min(dist)
+          hist = histogram(dist,binsize=mindist,min=mindist)
+          ;; Make a histrogram of the surface density 
+          radii = mindist*dindgen(n_elements(hist)+1)
+          surfhist = hist/(2d0*!dpi*(radii[1:*]^2d0-radii[0:n_elements(hist)-1]^2d0))
+          
+          radii = [-1*(reverse(radii[1:*])),radii[1:*]]
+          surfhist = [reverse(surfhist),surfhist]
+          
+          foo = gaussfit(radii,surfhist,A,estimate=[max(surfhist),0d0,max(radii)],nterm=3)
+          stdev = abs(A[2])
+
+          mdist = sigma*stdev
+          message,'the max distance is set to: '+string(mdist)+' arcsec',/inform
+          message,'which equals '+string(sigma)+' x stdev of '+string(stdev)+' arcsec', $
+                  /inform
+      ENDIF
+      
+      shift = 0
+      GOTO,DO_MATCHING
+      
+  ENDIF
+
+  out = join_mr(tab1,tab2,index_array=iarr)
+
+  ;; Do some headwork here
+  return,out
+END 

@@ -1,0 +1,26 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("header_coord_range" fun nil (lib "header_coord_range.pro" nil "sacha") "Result = %s(header)" (nil))
+   ("plines_header_coord_range" fun nil (lib "plines_v_Sept20.pro" nil "sacha") "Result = %s(header)" (nil))
+   ("plines_radec_maxraster" fun nil (lib "plines_v_Sept20.pro" nil "sacha") "Result = %s(savefilename)" (nil ("dirname")))
+   ("plines_subplot_size" fun nil (lib "plines_v_Sept20.pro" nil "sacha") "Result = %s" (nil ("dec_range") ("layout") ("pagebox") ("ra_range")))
+   ("plines_plotspectrum" pro nil (lib "plines_v_Sept20.pro" nil "sacha") "%s, savefilename" (nil ("_extra") ("continuumcolor") ("dirname") ("fitcolor") ("have_plotted") ("position") ("vrange")))
+   ("plines_plotmap" pro nil (lib "plines_v_Sept20.pro" nil "sacha") "%s, map_filename" (nil ("_extra") ("backgroundcolor") ("boxcolor") ("dec_range") ("have_plotted") ("limits") ("linename") ("mark") ("ncolors") ("position") ("ra_range") ("scaling") ("startcolor") ("textcolor")))
+   ("plines_plotduo" pro nil (lib "plines_v_Sept20.pro" nil "sacha") "%s, map_filename, sav_filename" (nil ("_extra") ("have_plotted") ("layout") ("pagebox") ("panelindex") ("show_max_mark") ("subplot_size")))
+   ("plines_help" pro nil (lib "plines_v_Sept20.pro" nil "sacha") "%s" (nil))
+   ("plines" pro nil (lib "plines_v_Sept20.pro" nil "sacha") "%s, sourcenames" (nil ("_extra") ("backgroundcolor") ("boxcolor") ("colortable") ("continuumcolor") ("fignames") ("fitcolor") ("fixpositions") ("help") ("layout") ("limits") ("lines") ("ncolors") ("outdir") ("pagebox") ("pardir") ("parfiles") ("pdf") ("plotorder") ("scaling") ("show_max_position") ("startcolor") ("textcolor") ("title") ("vrange")))
+   ("plines_plot_triangle" pro nil (lib "plines.pro" nil "sacha") "%s, position" (nil ("color")))
+   ("plines_plot_mark" pro nil (lib "plines.pro" nil "sacha") "%s, position" (nil ("color")))
+   ("plines_header_coord_range" fun nil (lib "plines.pro" nil "sacha") "Result = %s(header)" (nil))
+   ("plines_radec_maxraster" fun nil (lib "plines.pro" nil "sacha") "Result = %s(savefilename)" (nil ("dirname")))
+   ("plines_subplot_size" fun nil (lib "plines.pro" nil "sacha") "Result = %s" (nil ("dec_range") ("layout") ("pagebox") ("ra_range")))
+   ("plines_plotspectrum" pro nil (lib "plines.pro" nil "sacha") "%s, savefilename" (nil ("_extra") ("continuumcolor") ("continuumfitrange") ("dirname") ("fitcolor") ("have_plotted") ("mark") ("position") ("vrange")))
+   ("plines_plotmap" pro nil (lib "plines.pro" nil "sacha") "%s, map_filename" (nil ("_extra") ("backgroundcolor") ("boxcolor") ("dec_range") ("have_plotted") ("limits") ("linename") ("mark") ("ncolors") ("position") ("postplottingprocedure") ("ra_range") ("scaling") ("startcolor") ("textcolor")))
+   ("plines_plotduo" pro nil (lib "plines.pro" nil "sacha") "%s, map_filename, sav_filename" (nil ("_extra") ("have_plotted") ("layout") ("pagebox") ("panelindex") ("show_max_mark") ("subplot_size")))
+   ("plines_help" pro nil (lib "plines.pro" nil "sacha") "%s" (nil))
+   ("plines" pro nil (lib "plines.pro" nil "sacha") "%s, sourcenames" (nil ("_extra") ("backgroundcolor") ("boxcolor") ("colortable") ("continuumcolor") ("fignames") ("fitcolor") ("fixpositions") ("help") ("layout") ("limits") ("lines") ("ncolors") ("outdir") ("pagebox") ("pardir") ("parfiles") ("pdf") ("plotorder") ("postpro") ("scaling") ("show_max_position") ("startcolor") ("textcolor") ("title") ("vrange")))))

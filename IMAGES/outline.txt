@@ -1,0 +1,126 @@
+;; Hoi Roy,
+;; Here a short description of some idl things to process TIMMI2 data
+;;
+;;;; First the reading of the files
+;;
+;; This uses mrdfits which is NOT part of standard IDL but is
+;; available in the astrolib package which widely available and should
+;; be installed on any astronomers computer if idl is there ;-)
+;; You can find it at: http://idlastro.gsfc.nasa.gov/
+  
+;; Open the fits-file called 'raw_10350732_imag.fits'
+;; The lun refers to logical file unit, which is a number assigned to
+;; the file for FILE_IO within IDL
+;; Openr only opens the file but does not read anything
+file = 'raw_10350732_imag.fits'
+openr,lun,file,/get_lun
+
+;; read in the first part of the fits file and store the
+;; headerinformation in the variable called header
+;; Note the first part is actually an empty table
+foo = mrdfits(lun,0,header)
+
+;; Read the second part of the fits table which is the parameter set,
+;; not very instructive to read
+asciitable = mrdfits(lun)
+
+;; Now we start with the fun and get the frames
+;; You can read in the next image with this command:
+foo = mrdfits(lun)
+;; now foo contains to vid-frames of the CCD (one on each chop position)
+;; In fact it contain B-A and A separately.
+;; The file pointer is moved forward meaning that the next time you
+;; will read the next two images
+;; If you need to read the third image from the current point do this:
+foo = mrdfits(lun,2)
+;; where 2 means how many images to skip from the current position
+
+;; I always convert these long integer values to double floats because
+;; it is less easy to get strange integer division effects later on :-)
+imgs = double(mrdfits(lun))
+
+;; Now we can extract the positive and the negative image from the B-A
+;; B-A is held in imgs[*,*,0], while A is found in imgs[*,*,1]
+;; It make little sense to stare at A or B individually since the
+;; background is so enormously much stronger than most sources, unless
+;; you are looking at eta car :-).
+img_pos=abs(imgs[*,*,0]>0d0)
+img_neg=abs(imgs[*,*,0]<0d0)
+;; Note that within IDL imgs[*,*,0]<0d0 means that all point smaller
+;; than 0d0 will be set to 0d0.
+
+;; To close the file for reading do
+close,lun
+;; Also give the 'handle' or lun back to the system
+free_lun,lun
+
+;;  NOTES: 
+;; To find out if you have read the last image in the file you can
+;; test with:
+IF EOF(lun) THEN print,'oops we found the end'
+
+;;;; Displaying images
+;; within IDL image display is found in the TV section.
+;; Usefull image display routines are: TVSCL. which displays an
+;; image after properly scaling the image in the byte range
+
+;; Let's first make a simple image to show some things on.
+;; a simple array filled with 0,1,2,3,..,199 of doubles
+x = dindgen(200)
+;; Now we make a gaussian with some with
+g = 5d0*exp(-(x-1d2)^2d0/3d1)
+;; If you want to see what it looks like do:
+plot,g
+;; Now make an image (200,200) from this:
+img = g#g
+;; Just to check what is:
+tvscl,img
+;; Now add some background + random noise
+img = img+2d0+randomn(XXX,200,200)
+;; randomn gives a normally distributed series of points. The XXX is
+;; there to initialise and the 200,200 give the dimensions of the
+;; image because we want ta add noise to each point
+;; And add some slopiness
+img = img+x#(x*0d0+.005)
+
+;;now we can display the image that we made:
+tvscl,img
+tvscl,alog10(img>0d0)
+;; Now look at the difference with:
+tvscl,alog10(img>1d0)
+;; More usefull would be of course:
+tvscl,img>median(img)
+;; or
+tvscl,img<2*median(img)
+
+;; To see slices do things like this:
+plot,img[92 ,*]
+plot,img[96 ,10:120]
+plot,img[*  ,100]
+;; Other forms of indeces: img[*,10:*],img[10:20,*:25]
+
+;; you will also want to collapse things:
+plot,total(img,1)
+;; means to sum over dimension 1 (x) which gives you x=0,y=0,199 see also
+plot,total(img,2)
+;; now we can improve this of course by selecting some part of the
+;; image only to sum
+oplot,total(img[80:119,*],1) 
+
+;; also nice to do:
+rdpix,img
+
+;; A nice routine to look at those images is my tool called:
+;; show_image. You simply type show_image,img
+show_image.img
+
+;; This should help you some in looking at you images. The pipeline
+;; reduction needs looking into this wavelength before doing anything.
+;; I will send you the files for image reduction which would be
+;; called by my pipeline.
+;; The basic calling sequence is:
+;; sa_10340352 = timmi_shiftadd2('raw_10340352_imag.fits')
+;; But this may need adjusting for faint sources.
+
+;;; HTH,
+;;; Sacha

@@ -1,0 +1,22 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("makeratios_noerrors" fun nil (lib "makeratios_noerrors.pro" nil "sacha") "Result = %s(s)" (nil ("tagpairs")))
+   ("readfitresultwithheader" fun nil (lib "readfitresultwithheader.pro" nil "sacha") "Result = %s(sourcename)" (nil ("hdrfilename") ("subdir") ("topdir") ("xdrfilename")))
+   ("ae_safe_attribute" pro nil (lib "assignerrorclass.pro" nil "sacha") "%s, array, value, index" (nil))
+   ("assignerrorclass" fun nil (lib "assignerrorclass.pro" nil "sacha") "Result = %s(s)" (nil))
+   ("readfitresult" fun nil (lib "readfitresult.pro" nil "sacha") "Result = %s(sourcename)" (nil ("subdir") ("tagpairs") ("topdir") ("xdrfilename")))
+   ("make_decomposed_fitscubes" pro nil (lib "make_decomposed_fitscubes.pro" nil "sacha") "%s" (nil ("fitsfile") ("prefix") ("xdr")))
+   ("makerestspectrum" pro nil (lib "makerestspectrum.pro" nil "sacha") "%s, highsnrdir, regriddir" (nil ("restspec") ("restunc") ("status")))
+   ("restorefitxdr" fun nil (lib "restorefitxdr.pro" nil "sacha") "Result = %s(filename)" (nil ("status") ("varnames")))
+   ("index_of_items_in_list" fun nil (lib "assignerrors.pro" nil "sacha") "Result = %s(items, list)" (nil))
+   ("assignerrors" fun nil (lib "assignerrors.pro" nil "sacha") "Result = %s(xdrfile, s)" (nil))
+   ("makevariables_isine" fun nil (lib "makevariables.pro" nil "sacha") "Result = %s(values, range)" (nil))
+   ("makevariables" fun nil (lib "makevariables.pro" nil "sacha") "Result = %s(s)" (nil))
+   ("makevariablestruct_isine" fun nil (lib "makevariablestruct.pro" nil "sacha") "Result = %s(values, range)" (nil))
+   ("makevariablestruct" fun nil (lib "makevariablestruct.pro" nil "sacha") "Result = %s(s)" (nil))
+   ("makeratios" fun nil (lib "makeratios.pro" nil "sacha") "Result = %s(s)" (nil))))

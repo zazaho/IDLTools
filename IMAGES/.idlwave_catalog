@@ -1,0 +1,27 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("sh_tv" pro nil (lib "sh_tv.pro" nil "sacha") "%s, inimg" (nil ("_extra") ("examine") ("out") ("zoom")))
+   ("show_image_fancy_map" fun nil (lib "show_image.pro" nil "sacha") "Result = %s(map, weightmap)" (nil ("factor")))
+   ("show_image_DisplayNew" pro nil (lib "show_image.pro" nil "sacha") "%s, sInfo" (nil))
+   ("show_image_Cleanup" pro nil (lib "show_image.pro" nil "sacha") "%s, wTopBase" (nil))
+   ("show_image_scale" fun nil (lib "show_image.pro" nil "sacha") "Result = %s(image)" (nil))
+   ("show_image_MakeZooming" pro nil (lib "show_image.pro" nil "sacha") "%s, sInfo" (nil))
+   ("show_image_MakeScaling" pro nil (lib "show_image.pro" nil "sacha") "%s, sInfo" (nil))
+   ("show_image_Display" pro nil (lib "show_image.pro" nil "sacha") "%s, WindowID, Image" (nil))
+   ("show_image_refresh" pro nil (lib "show_image.pro" nil "sacha") "%s, sInfo" (nil ("dimage") ("dzoom") ("scale") ("zoom")))
+   ("show_image_DisplayOverlay" pro nil (lib "show_image.pro" nil "sacha") "%s, sInfo" (nil))
+   ("show_image_LoadCT" pro nil (lib "show_image.pro" nil "sacha") "%s, sInfo" (nil))
+   ("show_image_Event" pro nil (lib "show_image.pro" nil "sacha") "%s, sEvent" (nil))
+   ("show_image" pro nil (lib "show_image.pro" nil "sacha") "%s, InImage" (nil ("absolute") ("colortable") ("Mask") ("max") ("min") ("nan") ("no_block") ("out") ("resize") ("WeightImage")))
+   ("plbeam" pro nil (lib "plbeam.pro" nil "sacha") "%s" (nil))
+   ("sh_scale" fun nil (lib "sh_scale.pro" nil "sacha") "Result = %s(image)" (nil))
+   ("pli_ra_format" fun nil (lib "pli.pro" nil "sacha") "Result = %s(axis, index, ra)" (nil))
+   ("pli_dec_format" fun nil (lib "pli.pro" nil "sacha") "Result = %s(axis, index, decIn)" (nil))
+   ("pli" pro nil (lib "pli.pro" nil "sacha") "%s, image, header" (nil ("_extra") ("a") ("backgroundcolor") ("boxcolor") ("correct") ("d") ("fill") ("getcoords") ("help") ("label_precision") ("max_value") ("min_value") ("nlevels") ("nobox") ("offset") ("overplot") ("path_data_coords") ("path_info") ("path_xy") ("position") ("subimage") ("undistort") ("xrange") ("yrange")))
+   ("plbar" pro nil (lib "plbar.pro" nil "sacha") "%s" (nil ("_extra") ("boxcolor") ("indexrange") ("position") ("range") ("smartlabels") ("top")))
+   ("sh_scale_image" fun nil (lib "sh_scale_image.pro" nil "sacha") "Result = %s(in_image)" (nil ("equalise") ("log") ("max") ("min") ("normalise") ("percentile") ("positive") ("power") ("sqrt") ("square") ("zscale")))))

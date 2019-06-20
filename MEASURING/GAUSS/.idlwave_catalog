@@ -1,0 +1,31 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("trigaussfitplus_funct" pro nil (lib "trigaussfit_plus.pro" nil "sacha") "%s, x, d, f, pder" (nil))
+   ("trigaussfit_plus" fun nil (lib "trigaussfit_plus.pro" nil "sacha") "Result = %s(x, y, d, sigmad)" (nil ("errory")))
+   ("lorentzfct" fun nil (lib "lorentxfct.pro" nil "sacha") "Result = %s(x, p)" (nil))
+   ("doublelorentzfct" fun nil (lib "lorentxfct.pro" nil "sacha") "Result = %s(x, p)" (nil))
+   ("trilorentzfct" fun nil (lib "lorentxfct.pro" nil "sacha") "Result = %s(x, p)" (nil))
+   ("quatlorentzfct" fun nil (lib "lorentxfct.pro" nil "sacha") "Result = %s(x, p)" (nil))
+   ("trigauss" fun nil (lib "trigauss.pro" nil "sacha") "Result = %s(w, d)" (nil))
+   ("sh_dofit" fun nil (lib "sh_dofit.pro" nil "sacha") "Result = %s(in, d, sigmad)" (nil ("_extra") ("estim") ("xrange")))
+   ("sh_do3fit" fun nil (lib "sh_do3fit.pro" nil "sacha") "Result = %s(in, d, sigmad)" (nil ("_extra") ("errory") ("estim") ("restart") ("spec") ("xrange")))
+   ("trilorentzfitplusplus_funct" pro nil (lib "trilorentzfit_plusplus.pro" nil "sacha") "%s, x, p, f, pder" (nil))
+   ("trilorentzfit_plusplus" fun nil (lib "trilorentzfit_plusplus.pro" nil "sacha") "Result = %s(x, y, p, sigmad)" (nil ("errory")))
+   ("dosgaussfit_funct" pro nil (lib "dosgaussfit.pro" nil "sacha") "%s, x, d, f, pder" (nil))
+   ("dosgaussfit" fun nil (lib "dosgaussfit.pro" nil "sacha") "Result = %s(x, y, d, sigmad)" (nil ("errory")))
+   ("unogaussfit_funct" pro nil (lib "unogaussfit.pro" nil "sacha") "%s, x, d, f, pder" (nil))
+   ("unogaussfit" fun nil (lib "unogaussfit.pro" nil "sacha") "Result = %s(x, y, d, sigmad)" (nil ("errory")))
+   ("trilorentzfit_funct" pro nil (lib "trilorentzfit.pro" nil "sacha") "%s, x, p, f, pder" (nil))
+   ("trilorentzfit" fun nil (lib "trilorentzfit.pro" nil "sacha") "Result = %s(x, y, p, sigmad)" (nil ("errory")))
+   ("dubbel" pro nil (lib "dubbelgauss.pro" nil "sacha") "%s, aarf, aarr, xrange" (nil))
+   ("trigaussfit_funct" pro nil (lib "trigaussfit.pro" nil "sacha") "%s, x, d, f, pder" (nil))
+   ("trigaussfit" fun nil (lib "trigaussfit.pro" nil "sacha") "Result = %s(x, y, d, sigmad)" (nil ("errory")))
+   ("sh_do2fit" fun nil (lib "sh_do2fit.pro" nil "sacha") "Result = %s(in, d, sigmad)" (nil ("_extra") ("errory") ("estim") ("restart") ("spec") ("xrange")))
+   ("sh_do1fit" fun nil (lib "sh_do1fit.pro" nil "sacha") "Result = %s(in, d, sigmad)" (nil ("_extra") ("errory") ("estim") ("restart") ("spec") ("xrange")))
+   ("trilorentzfitplus_funct" pro nil (lib "trilorentzfit_plus.pro" nil "sacha") "%s, x, p, f, pder" (nil))
+   ("trilorentzfit_plus" fun nil (lib "trilorentzfit_plus.pro" nil "sacha") "Result = %s(x, y, p, sigmad)" (nil ("errory")))))

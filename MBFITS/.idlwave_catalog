@@ -1,0 +1,14 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("implode_mbfits" pro nil (lib "implode_mbfits.pro" nil "sacha") "%s, dirname, filename" (nil ("_extra")))
+   ("writefits_apex" pro nil (lib "writefits_apex.pro" nil "sacha") "%s, filename, data" (nil ("_extra") ("header") ("help")))
+   ("explode_mbfits" pro nil (lib "explode_mbfits.pro" nil "sacha") "%s, filename" (nil ("_extra") ("struct")))
+   ("tags_double2float" fun nil (lib "tags_double2float.pro" nil "sacha") "Result = %s(struct)" (nil))
+   ("readmbfits" fun nil (lib "readmbfits.pro" nil "sacha") "Result = %s(filename)" (nil ("help") ("nsubs")))
+   ("showtags" pro nil (lib "showtags.pro" nil "sacha") "%s, struct" (nil ("prefix")))
+   ("writembfits" pro nil (lib "writembfits.pro" nil "sacha") "%s, filename, struct_in" (nil ("exploded") ("forcegivenname") ("help") ("keepold") ("writedouble")))))

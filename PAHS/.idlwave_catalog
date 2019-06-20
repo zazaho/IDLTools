@@ -1,0 +1,10 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("coronene" pro nil (lib "coronene.pro" nil "sacha") "%s" (nil ("_extra")))
+   ("has_pah" fun nil (lib "has_pah.pro" nil "sacha") "Result = %s(aarin)" (nil ("threshold")))
+   ("plotpah" pro nil (lib "plotpah.pro" nil "sacha") "%s, points" (nil ("_extra") ("aspect") ("fullhydro") ("hydro") ("label") ("nooplot") ("origin") ("ring") ("rotation") ("size")))))

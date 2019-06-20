@@ -1,0 +1,39 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu May 24 11:03:27 2007
+;; Desktop file format version 206
+;; Emacs version 22.1.50.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/sacha/IA_TOOL/NELE/read_msup_model.pro"
+  "read_msup_model.pro"
+  'idlwave-mode
+  '(auto-fill-mode abbrev-mode highlight-tail-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/sacha/IA_TOOL/NELE/plmsup.pro"
+  "plmsup.pro"
+  'idlwave-mode
+  '(auto-fill-mode abbrev-mode highlight-tail-mode)
+  509
+  '(187 t)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+

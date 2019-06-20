@@ -1,0 +1,15 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("Fit_event" pro nil (lib "specduc.pro" nil "sacha") "%s, event" (nil))
+   ("plotfigure" fun nil (lib "specduc.pro" nil "sacha") "Result = %s" (nil))
+   ("leescalwave" fun nil (lib "specduc.pro" nil "sacha") "Result = %s(band)" (nil))
+   ("shiftair" fun nil (lib "specduc.pro" nil "sacha") "Result = %s(wcali, cal, src, xshift, airm1, airm2, nrims, nrimc)" (nil))
+   ("reduceren" fun nil (lib "specduc.pro" nil "sacha") "Result = %s(filenaam)" (nil))
+   ("specduc" fun nil (lib "specduc.pro" nil "sacha") "Result = %s(source, calibration)" (nil))
+   ("addingspec" fun nil (lib "addingspec.pro" nil "sacha") "Result = %s(spec_in)" (nil ("image") ("noshow") ("spec")))
+   ("lezen" fun nil (lib "lezen.pro" nil "sacha") "Result = %s(tabelnaam)" (nil ("aar")))))

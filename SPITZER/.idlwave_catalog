@@ -1,0 +1,8 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("read_ftbl" fun nil (lib "read_ftbl.pro" nil "sacha") "Result = %s(fname)" (nil ("_extra") ("comment") ("help") ("skip") ("sort") ("tabel")))))

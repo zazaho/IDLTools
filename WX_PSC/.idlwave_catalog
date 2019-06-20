@@ -1,0 +1,21 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("plwx" pro nil (lib "plwx.pro" nil "sacha") "%s, in" (nil ("_extra") ("modust")))
+   ("read_model_from_path" fun nil (lib "read_model.pro" nil "sacha") "Result = %s(readlines, path)" (nil ("prefix")))
+   ("read_model_match_strings" fun nil (lib "read_model.pro" nil "sacha") "Result = %s(sLong, sFind)" (nil))
+   ("read_model_values_from_param" fun nil (lib "read_model.pro" nil "sacha") "Result = %s(allparams, allvalues, param)" (nil ("numeric")))
+   ("read_model_read_batch" fun nil (lib "read_model.pro" nil "sacha") "Result = %s(filename)" (nil))
+   ("read_model_parse_file" pro nil (lib "read_model.pro" nil "sacha") "%s, alllines" (nil ("command") ("models") ("params") ("paths") ("readlines") ("separator") ("uniq_params") ("values")))
+   ("read_model_Event" pro nil (lib "read_model.pro" nil "sacha") "%s, sEvent" (nil))
+   ("read_model" fun nil (lib "read_model.pro" nil "sacha") "Result = %s(filename)" (nil ("command") ("no_block") ("plotwindow") ("separator")))
+   ("read_multi_get_dustout" pro nil (lib "read_multi.pro" nil "sacha") "%s, file" (nil ("nwave") ("spec") ("star") ("wave")))
+   ("read_multi" fun nil (lib "read_multi.pro" nil "sacha") "Result = %s(dir)" (nil ("distance")))
+   ("wxgrid_modust" pro nil (lib "wxgrid.pro" nil "sacha") "%s, file" (nil ("gas_to_dust") ("mdot") ("pmode") ("R_in") ("R_out") ("R_star") ("T_star") ("v_exp")))
+   ("wxgrid_dust" pro nil (lib "wxgrid.pro" nil "sacha") "%s, file" (nil ("amax") ("amin") ("frac_fe")))
+   ("wxgrid" pro nil (lib "wxgrid.pro" nil "sacha") "%s" (nil ("amax1") ("amax2") ("amin1") ("amin2") ("clean") ("distance") ("execute") ("frac_fe1") ("frac_fe2") ("gas_to_dust") ("help") ("L_star") ("Mdot1") ("Mdot2") ("offset") ("R_in1") ("R_in2") ("R_out1") ("R_out2") ("R_star") ("Rootdir") ("T_star") ("v_exp")))
+   ("display_model" pro nil (lib "display_model.pro" nil "sacha") "%s, filename" (nil ("_extra")))))

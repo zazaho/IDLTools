@@ -1,0 +1,18 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("cww_integrate" fun nil (lib "convolve_with_wise.pro" nil "sacha") "Result = %s(w, f)" (nil))
+   ("convolve_with_wise" fun nil (lib "convolve_with_wise.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("K_1") ("K_2") ("K_3") ("K_4") ("wise_1") ("wise_2") ("wise_3") ("wise_4")))
+   ("cwi_integrate" fun nil (lib "convolve_with_iras.pro" nil "sacha") "Result = %s(w, f)" (nil))
+   ("convolve_with_iras" fun nil (lib "convolve_with_iras.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("iras_100") ("iras_12") ("iras_25") ("iras_60") ("K_100") ("K_12") ("K_25") ("K_60")))
+   ("sed2phot_integrate" fun nil (lib "sed2phot.pro" nil "sacha") "Result = %s(w, f)" (nil))
+   ("sed2phot" fun nil (lib "sed2phot.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("_extra") ("akari") ("all") ("colorcorrections") ("denis") ("filterdata") ("galex") ("help") ("herschel") ("irac") ("iras") ("mips") ("msx") ("pacs") ("plot") ("profilesdir") ("quiet") ("relaxed") ("spire") ("spitzer") ("twomass") ("wise")))
+   ("cwa_integrate" fun nil (lib "convolve_with_akari.pro" nil "sacha") "Result = %s(w, f)" (nil))
+   ("convolve_with_akari" fun nil (lib "convolve_with_akari.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("akari_l18w") ("akari_n160") ("akari_n60") ("akari_s9w") ("akari_widel") ("akari_wides") ("K_l18w") ("K_n160") ("K_n60") ("K_s9w") ("K_widel") ("K_wides")))
+   ("cw2_integrate" fun nil (lib "convolve_with_2mass.pro" nil "sacha") "Result = %s(w, f)" (nil))
+   ("convolve_with_2mass" fun nil (lib "convolve_with_2mass.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("K_h") ("K_j") ("K_ks")))
+   ("mag2jy" fun nil (lib "mag2jy.pro" nil "sacha") "Result = %s" (nil ("B") ("e_B") ("e_H") ("e_I") ("e_J") ("e_K") ("e_L") ("e_M") ("e_R") ("e_U") ("e_V") ("e_WISE1") ("e_WISE2") ("e_WISE3") ("e_WISE4") ("H") ("I") ("J") ("K") ("L") ("M") ("noprint") ("R") ("U") ("V") ("wave") ("WISE1") ("WISE2") ("WISE3") ("WISE4")))))

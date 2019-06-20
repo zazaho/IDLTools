@@ -1,0 +1,14 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("read_fsp" fun nil (lib "read_fsp.pro" nil "sacha") "Result = %s(fname)" (nil ("_extra") ("lws")))
+   ("read_flsp" fun nil (lib "read_flsp.pro" nil "sacha") "Result = %s(fname)" (nil ("noprint") ("pad") ("xlog")))
+   ("read_fpsp" fun nil (lib "read_fpsp.pro" nil "sacha") "Result = %s(fname)" (nil ("noprint") ("pad")))
+   ("get_files" fun nil (lib "get_files.pro" nil "sacha") "Result = %s" (nil ("lws") ("num") ("pad")))
+   ("sh_makeindex" pro nil (lib "sh_makeindex.pro" nil "sacha") "%s" (nil ("lws")))
+   ("read_fssp" fun nil (lib "read_fssp.pro" nil "sacha") "Result = %s(fname_in)" (nil ("noprint") ("pad_in")))
+   ("sh_plot_thumb" pro nil (lib "sh_plot_thumb.pro" nil "sacha") "%s, files" (nil ("_extra") ("ncol") ("npage") ("nrow") ("prefix") ("start") ("test_pah")))))

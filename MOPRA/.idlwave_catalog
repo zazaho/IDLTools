@@ -1,0 +1,10 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("fixmopra_sliding_median" fun nil (lib "fixmopra.pro" nil "sacha") "Result = %s(array, width)" (nil))
+   ("fixmopra" pro nil (lib "fixmopra.pro" nil "sacha") "%s, files" (nil ("_extra") ("band3c") ("outdir") ("plot") ("remove_first") ("remove_last")))
+   ("mopra_defringe" fun nil (lib "mopra_defringe.pro" nil "sacha") "Result = %s(y, band3c)" (nil ("_extra") ("nfringes") ("noplot")))))

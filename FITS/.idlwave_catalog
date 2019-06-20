@@ -1,0 +1,14 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("createfits" pro nil (lib "createfits.pro" nil "sacha") "%s, filename" (nil ("_extra") ("center") ("epoch") ("noise") ("pixelsize") ("size")))
+   ("fitsheader_pc2cd" fun nil (lib "fitsheader_pc2cd.pro" nil "sacha") "Result = %s(header)" (nil))
+   ("hswarp" pro nil (lib "hswarp.pro" nil "sacha") "%s, oldimage, oldheader, newimage, newheader, refheader" (nil ("debug") ("fixheader") ("keepedge")))
+   ("readcubismcube" fun nil (lib "readcubismcube.pro" nil "sacha") "Result = %s(cubename)" (nil))
+   ("writefitscube" pro nil (lib "writefitscube.pro" nil "sacha") "%s, struct, file" (nil ("filename") ("nofixheader") ("usemask")))
+   ("extractsubfits" pro nil (lib "extractsubfits.pro" nil "sacha") "%s, fitsfilenames, cntr, sz" (nil ("_extra") ("center") ("extensions") ("help") ("nooverwrite") ("outdir") ("outfilename") ("overwrite") ("prefix") ("recenter") ("size") ("suffix")))
+   ("readfitscube" fun nil (lib "readfitscube.pro" nil "sacha") "Result = %s(file)" (nil))))

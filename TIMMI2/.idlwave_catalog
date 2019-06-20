@@ -1,0 +1,28 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("timmi_fitshift_fitfunction" fun nil (lib "fit_voorbeeld.pro" nil "sacha") "Result = %s(p)" (nil))
+   ("timmi_fitshift" fun nil (lib "fit_voorbeeld.pro" nil "sacha") "Result = %s(i1, i2)" (nil))
+   ("fff" fun nil (lib "timmi_shiftadd2.pro" nil "sacha") "Result = %s(in)" (nil))
+   ("timmi_shiftadd2" fun nil (lib "timmi_shiftadd2.pro" nil "sacha") "Result = %s(file)" (nil ("interactive") ("journal") ("Nimage") ("skip")))
+   ("timmi_deconvolve" fun nil (lib "timmi_deconvolve.pro" nil "sacha") "Result = %s(img_in, psf_in)" (nil ("crit") ("mask") ("max") ("psf") ("radius") ("show")))
+   ("fff" fun nil (lib "timmi2_shiftadd.pro" nil "sacha") "Result = %s(in)" (nil))
+   ("timmi2_shiftadd" fun nil (lib "timmi2_shiftadd.pro" nil "sacha") "Result = %s(dir)" (nil ("auto") ("beam") ("box") ("filename") ("journal") ("nods") ("noplot") ("ref")))
+   ("timmi_read_fits_array" fun nil (lib "timmi_read_fits_array.pro" nil "sacha") "Result = %s(file)" (nil ("max") ("Nimage") ("start") ("xr") ("yr")))
+   ("timmi_fitshift_fitfunction" fun nil (lib "timmi_fitshift.pro" nil "sacha") "Result = %s(p)" (nil))
+   ("timmi_fitshift" fun nil (lib "timmi_fitshift.pro" nil "sacha") "Result = %s(ref, img)" (nil ("boxsize") ("edgesize") ("x") ("y")))
+   ("timmi_shift_cubic" fun nil (lib "timmi_shift_cubic.pro" nil "sacha") "Result = %s(in, dx, dy)" (nil))
+   ("timmi2_shift" fun nil (lib "timmi2_shift.pro" nil "sacha") "Result = %s(in, dx, dy)" (nil))
+   ("timmi_shift" fun nil (lib "timmi_shift.pro" nil "sacha") "Result = %s(in, dx, dy)" (nil))
+   ("timmi2_fitshift_fitfunction" fun nil (lib "timmi2_fitshift.pro" nil "sacha") "Result = %s(p)" (nil))
+   ("timmi2_fitshift" fun nil (lib "timmi2_fitshift.pro" nil "sacha") "Result = %s(ref, img)" (nil ("boxsize") ("edgesize") ("x") ("y")))
+   ("readplanes" pro nil (lib "readplanes.pro" nil "sacha") "%s, DIR, MINOR, STACK, CUBE, INTTIME" (nil ("hdr") ("istart") ("istop") ("wait")))
+   ("readncube" pro nil (lib "readncube.pro" nil "sacha") "%s, file, ttbb, cube, inttime" (nil ("hdr") ("istart") ("istop") ("wait")))
+   ("timmi_bbfitfunct" fun nil (lib "timmi_makecolour.pro" nil "sacha") "Result = %s(par)" (nil))
+   ("timmi_bbfit" fun nil (lib "timmi_makecolour.pro" nil "sacha") "Result = %s(f_in)" (nil))
+   ("timmi_makecolour" fun nil (lib "timmi_makecolour.pro" nil "sacha") "Result = %s(i1, i2, i3, i4)" (nil))
+   ("timmi2s_shift" fun nil (lib "timmi2s_shift.pro" nil "sacha") "Result = %s(in, dx, dy)" (nil))))

@@ -1,0 +1,22 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("dust_mass" fun nil (lib "dust_mass.pro" nil "sacha") "Result = %s(lnk)" (nil ("distance") ("flux") ("rho") ("temp") ("xrange")))
+   ("xpeak" fun nil (lib "xpeak.pro" nil "sacha") "Result = %s(a)" (nil))
+   ("getfact" fun nil (lib "getfact.pro" nil "sacha") "Result = %s(lnk, temp, fct)" (nil))
+   ("plotfit" pro nil (lib "plotfit.pro" nil "sacha") "%s, a, c, lnk, temp, fact" (nil ("_extra") ("nsize") ("num") ("obj") ("opos")))
+   ("measure30_contsub" fun nil (lib "measure30_contsub.pro" nil "sacha") "Result = %s(in, cont)" (nil ("_extra") ("zoom")))
+   ("interpol_aar" fun nil (lib "interpol_aar.pro" nil "sacha") "Result = %s(aar_in)" (nil ("step")))
+   ("measure30" fun nil (lib "measure30.pro" nil "sacha") "Result = %s(in, cont)" (nil ("_extra") ("zoom")))
+   ("pl30" pro nil (lib "pl30.pro" nil "sacha") "%s, aar, cont, lnk, temp, fact" (nil ("_extra")))
+   ("measure_continuum" fun nil (lib "measure_continuum.pro" nil "sacha") "Result = %s(cont)" (nil))
+   ("int_qab" fun nil (lib "int_qab.pro" nil "sacha") "Result = %s(temp, lnk)" (nil ("xrange")))
+   ("pl3" pro nil (lib "pl3.pro" nil "sacha") "%s, a1, a2, a3" (nil ("_extra") ("col2") ("col3") ("style2") ("style3") ("sym2") ("sym3") ("thi2") ("thi3")))
+   ("pl2" pro nil (lib "pl2.pro" nil "sacha") "%s, a1, a2" (nil ("_extra") ("color2") ("style2")))
+   ("plotfit2" pro nil (lib "plotfit2.pro" nil "sacha") "%s, a, c, lnk, temp, fact, xpos, ypos" (nil ("_extra") ("axis") ("nsize") ("obj") ("opos")))
+   ("fit30" fun nil (lib "fit30.pro" nil "sacha") "Result = %s(in)" (nil ("power")))
+   ("measure_lc_contsub" fun nil (lib "measure_lc_contsub.pro" nil "sacha") "Result = %s(in)" (nil))))

@@ -1,0 +1,12 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("sh_cow" fun nil (lib "sh_cow.pro" nil "sacha") "Result = %s(in)" (nil ("_extra") ("plot") ("xrange")))
+   ("sh_bisector" fun nil (lib "sh_bisector.pro" nil "sacha") "Result = %s(in, p)" (nil ("cursor") ("help") ("levels") ("noplot") ("numlevels") ("order") ("rangelevels") ("xrange")))
+   ("sh_feature" fun nil (lib "sh_feature.pro" nil "sacha") "Result = %s(in)" (nil ("CONT") ("OLDDATA") ("XRANGE") ("ZOOM")))
+   ("featurefit_funct" pro nil (lib "featurefit.pro" nil "sacha") "%s, x, d, f, pder" (nil))
+   ("featurefit" fun nil (lib "featurefit.pro" nil "sacha") "Result = %s(in, d, sigmad)" (nil ("errory") ("feature") ("out") ("xrange")))))

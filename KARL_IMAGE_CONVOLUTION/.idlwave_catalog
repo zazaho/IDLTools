@@ -1,0 +1,10 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("conv_image" pro nil (lib "conv_image.pro" nil "sacha") "%s, file, kernel_file, out_file" (nil ("conserve_flux") ("do_unc") ("image_scale") ("no_convolve") ("no_derotate") ("no_rebin") ("no_shift") ("out_pixel_scale") ("silent")))
+   ("ensure_psf_centered" pro nil (lib "ensure_psf_centered.pro" nil "sacha") "%s, image" (nil))
+   ("change_image_scale" fun nil (lib "change_image_scale.pro" nil "sacha") "Result = %s(image, header, image_scale_in, new_image_scale_in)" (nil))))

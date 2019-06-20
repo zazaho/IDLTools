@@ -1,0 +1,13 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("slope_funct" fun nil (lib "n66_fit_slope.pro" nil "sacha") "Result = %s(par)" (nil ("x")))
+   ("chi2_slope" fun nil (lib "n66_fit_slope.pro" nil "sacha") "Result = %s(par)" (nil ("err") ("x") ("y")))
+   ("fit_slope" fun nil (lib "n66_fit_slope.pro" nil "sacha") "Result = %s(x_in, y_in, err_in)" (nil ("initial_par") ("initial_scale")))
+   ("aper_radec" fun nil (lib "aper_radec.pro" nil "sacha") "Result = %s(par1)" (nil ("_extra") ("center") ("header") ("noconvert") ("radius")))
+   ("make_tir_map" fun nil (lib "make_tir_map.pro" nil "sacha") "Result = %s(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15)" (nil ("wave")))
+   ("make_oversampled_hdr" fun nil (lib "make_oversampled_hdr.pro" nil "sacha") "Result = %s(hdr_in, factor_in)" (nil))))

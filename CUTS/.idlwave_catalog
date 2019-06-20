@@ -1,0 +1,16 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("hastrom_cube" pro nil (lib "hastrom_cube.pro" nil "sacha") "%s, fitsfile, refheader, outdir" (nil))
+   ("collate_cubes" pro nil (lib "collate_cubes.pro" nil "sacha") "%s, files, outfile" (nil))
+   ("conv_cube_sed" pro nil (lib "conv_cube_sed.pro" nil "sacha") "%s, fitsfile, kernel, outdir" (nil))
+   ("makeLIR" fun nil (lib "makelir.pro" nil "sacha") "Result = %s(incube, inwaves)" (nil ("fluxes")))
+   ("int_sed" fun nil (lib "int_sed.pro" nil "sacha") "Result = %s(w, f)" (nil))
+   ("plploint" pro nil (lib "plploint.pro" nil "sacha") "%s, filt_in, y_in, e_y_in" (nil ("_extra") ("flambda") ("iras")))
+   ("makeaverseds" fun nil (lib "makeaverseds.pro" nil "sacha") "Result = %s(cube, waves, criterionmap)" (nil ("binmode") ("bins") ("maxbin") ("minbin") ("minfraction") ("nbins") ("normalised") ("weightmap")))
+   ("measure_rings" pro nil (lib "measure_rings.pro" nil "sacha") "%s, image, inxc, inyc, radii" (nil ("background") ("mean") ("nbin") ("stdev") ("subtract") ("total")))
+   ("measure_rings_cube" pro nil (lib "measure_rings_cube.pro" nil "sacha") "%s, cube, inxc, inyc, radii" (nil ("lirimage") ("mean") ("minfraction") ("nbin") ("stdev") ("subtract") ("total") ("weightmap")))))

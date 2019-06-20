@@ -1,0 +1,31 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("nsvscurves" pro nil (lib "nsvscurves.pro" nil "sacha") "%s, table" (nil))
+   ("sh_period_modify_vardata" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo, field, value" (nil))
+   ("sh_period_stdev2" fun nil (lib "sh_period.pro" nil "sacha") "Result = %s(values, errors)" (nil ("wmean")))
+   ("sh_period_sin" pro nil (lib "sh_period.pro" nil "sacha") "%s, X, A, F, pder" (nil))
+   ("sh_period_TwoSin" pro nil (lib "sh_period.pro" nil "sacha") "%s, X, A, F, pder" (nil))
+   ("sh_period_fit_phase" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo, freq, amplitude" (nil))
+   ("sh_period_fit_sin" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil ("amplitude") ("fitphase") ("freq") ("mean") ("phase")))
+   ("sh_period_fit_TwoSin" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil))
+   ("sh_period_parabola" pro nil (lib "sh_period.pro" nil "sacha") "%s, X, A, F, pder" (nil))
+   ("sh_period_fit_parabola" fun nil (lib "sh_period.pro" nil "sacha") "Result = %s(sInfo, cfreq)" (nil))
+   ("sh_period_pdm" fun nil (lib "sh_period.pro" nil "sacha") "Result = %s(times, values, errors)" (nil ("max_freq") ("min_freq") ("nb") ("nc") ("nfreq")))
+   ("sh_period_pdm_meanlightcurve" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil))
+   ("sh_period_residual" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil))
+   ("sh_period_startlog" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil))
+   ("sh_period_writelog" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil ("status")))
+   ("sh_period_pdmplot" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil ("reset")))
+   ("sh_period_lcplot" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil ("reset")))
+   ("sh_period_resplot" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil ("reset")))
+   ("sh_period_sinthetic" fun nil (lib "sh_period.pro" nil "sacha") "Result = %s(sInfo, x, A)" (nil))
+   ("sh_period_reset" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo" (nil ("all") ("Data") ("FitPar") ("FitSin") ("FitTwoSin") ("Log") ("MeanCurve") ("PDM") ("PlotLC") ("PlotPDM") ("PlotRes") ("Residual")))
+   ("sh_period_init" pro nil (lib "sh_period.pro" nil "sacha") "%s, sInfo, field, value" (nil))
+   ("sh_period_event" pro nil (lib "sh_period.pro" nil "sacha") "%s, sEvent" (nil))
+   ("sh_period" pro nil (lib "sh_period.pro" nil "sacha") "%s, par" (nil ("logfilename") ("no_block") ("status")))
+   ("asascurves" pro nil (lib "asascurves.pro" nil "sacha") "%s, table" (nil))))

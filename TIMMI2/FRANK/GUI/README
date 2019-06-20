@@ -1,0 +1,67 @@
+README			:This file
+addingspec.pro		:Program to read in an image with a spectrum and
+			 add the positive and negative images and make
+			 a spectrum. 
+dfefault.pro		:a small programm to give a variable a default value
+input_calibration	:Inputfile for the calibration stars
+			 first number is number of calibration stars
+			 then for every star the name, 
+			 the address of the fits file containing the added 
+			 images
+			 the total number of images (N.B. I have assumed that 
+			 the integration of every image is equal)
+			 the airmass during the observations
+			 the flux in Jy
+input_source		:Inputfile for the observed stars
+			 first number is number of observed stars
+			 then for every star the name, 
+			 the address of the fits file containing the added 
+			 images
+			 the total number of images (N.B. I have assumed that 
+			 the integration of every image is equal)
+			 the airmass during the observations
+lezen.pro		:small program to read a ascii table
+specduc.pro		:The main program
+wavelength_tabel_N.tab	:calibrationfile for the wavelength at every pixel
+			 for the N-band
+wavelength_tabel_Q.tab	:calibrationfile for the wavelength at every pixel
+			 for the Q-band
+
+
+---------------------------------------------------------------------
+How to operate:
+
+Start IDL, type in twice '.run specduc' the second time there should be no 
+error messages. Then you can start it with 
+
+result = specduc() 
+
+if you want to use the standard input files or
+
+result = specduc(filename_for_input_source,filename_for_input_calibration)
+
+When you kill the widget the present spectrum will be written in 'result' as a 
+two column table (wavelength, flux).
+
+For the rest is it rather self explanatory.
+
+Warnings:
+
+1) No guarantees are given!
+2) The flux absolute flux calibration is probably not completely right yet, 
+   but should be close. The relative flux calibration should be OK.
+3) It is assume dthat the calibration star goes like F goes like lambda^-2 
+3) All slider values are internally divided by 100, i.e. 100 on the slider is
+   1 for the program. Lack of IDL knowledge is displayed here by me.
+4) I have no good idea about the wavelength calibration yet, for the moment I 
+   have assumed that the observed star is correct.
+
+Complaints:
+
+I do not accept complaints but, remarks and suggestions are always welcome.
+
+Enjoy,
+
+Frank Molster
+
+20-02-2002

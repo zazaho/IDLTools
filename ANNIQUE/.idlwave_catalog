@@ -1,0 +1,12 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("filtering" fun nil (lib "defilter.pro" nil "sacha") "Result = %s(aar)" (nil))
+   ("defilter" pro nil (lib "defilter.pro" nil "sacha") "%s" (nil ("niste") ("resultat2") ("resutat3")))
+   ("sh_noisefilter" fun nil (lib "sh_noisefilter.pro" nil "sacha") "Result = %s(aar)" (nil ("_extra") ("hcut") ("perc") ("plot") ("smoothing")))
+   ("defilter" pro nil (lib "sh_noisefilter.pro" nil "sacha") "%s" (nil ("niste") ("resultat2") ("resutat3")))
+   ("optim_noise" fun nil (lib "optim_noise.pro" nil "sacha") "Result = %s(aar)" (nil ("_extra") ("cont_range") ("moments") ("order") ("srange") ("step")))))

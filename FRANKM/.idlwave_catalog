@@ -1,0 +1,11 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("iras_flux" fun nil (lib "iras_flux.pro" nil "sacha") "Result = %s(aarstart)" (nil ("iras100") ("iras12") ("iras25") ("iras60")))
+   ("irasconv_tab" pro nil (lib "irasconv_tab.pro" nil "sacha") "%s, tabelin" (nil))
+   ("irasconv" pro nil (lib "irasconv.pro" nil "sacha") "%s, aarstart" (nil ("iras100") ("iras12") ("iras25") ("iras60")))
+   ("irasconv_aar" pro nil (lib "irasconv_aar.pro" nil "sacha") "%s, aarstart" (nil))))

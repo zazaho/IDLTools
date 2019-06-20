@@ -1,0 +1,43 @@
+From rvanboek@eso.org Mon Aug 27 15:03:24 2001
+Date: Mon, 27 Aug 2001 14:56:14 +0200 (MET DST)
+From: Roy Van Boekel <rvanboek@eso.org>
+To: Sacha Hony <hony@astro.uva.nl>
+Subject: headers
+
+hoi Sacha,
+
+In het hoofdprogrammaatje lees ik de header info zo in:
+
+  file = 'raw_'+strcompress(string(basename),/remove_all)+'_espe.fits'
+  head0 = HEADFITS(file,exten=0)   ;;read the header information
+  head1 = HEADFITS(file,exten=1)   ;;read the header information
+  head2 = HEADFITS(file,exten=2)   ;;read the header information
+  head2 = HEADFITS(file,exten=2)   ;;read the header information
+
+en dan maak ik een header voor de output fits file (deze header gebruik ik
+overigens overal in het programma om handige info (zoals het aantal nods
+e.d.) overal paraat te hebben. Hoef je alleen steeds de header door te
+spelen aan de verschillende routines.
+
+  ;; start constructing the header of the output fits file
+  headout = construct_header(head0,head2)
+
+groetjes,
+Roy
+
+=======================================================
+
+Roy van Boekel
+European Southern Observatory & University of Amsterdam
+Karl-Schwarzschild-Str. 2
+D-85748 Garching bei Muenchen
+Germany
+office 507
+phone +49 89 3200 6485
+fax +49 89 320 2362
+
+=======================================================
+
+    [ Part 2, ""  Text/PLAIN (Name: "construct_header.pro")  67 lines. ]
+    [ Unable to print this part. ]
+

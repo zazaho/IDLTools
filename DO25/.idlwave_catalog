@@ -1,0 +1,19 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("pldo25" pro nil (lib "pldo25.pro" nil "sacha") "%s, in" (nil ("_extra") ("modust")))
+   ("read_do25model_from_path" fun nil (lib "read_do25model.pro" nil "sacha") "Result = %s(readlines, path)" (nil ("prefix")))
+   ("read_do25model_match_strings" fun nil (lib "read_do25model.pro" nil "sacha") "Result = %s(sLong, sFind)" (nil))
+   ("read_do25model_values_from_param" fun nil (lib "read_do25model.pro" nil "sacha") "Result = %s(allparams, allvalues, param)" (nil ("numeric")))
+   ("read_do25model_read_batch" fun nil (lib "read_do25model.pro" nil "sacha") "Result = %s(filename)" (nil))
+   ("read_do25model_parse_file" pro nil (lib "read_do25model.pro" nil "sacha") "%s, alllines" (nil ("command") ("models") ("params") ("paths") ("readlines") ("separator") ("uniq_params") ("values")))
+   ("read_do25model_Event" pro nil (lib "read_do25model.pro" nil "sacha") "%s, sEvent" (nil))
+   ("read_do25model" fun nil (lib "read_do25model.pro" nil "sacha") "Result = %s(filename)" (nil ("command") ("no_block") ("plotwindow") ("separator")))
+   ("display_do25model" pro nil (lib "display_do25model.pro" nil "sacha") "%s, filename" (nil ("_extra")))
+   ("do25grid_modust" pro nil (lib "do25grid.pro" nil "sacha") "%s, file" (nil ("L_star") ("R_in") ("R_out") ("rho")))
+   ("do25grid_dust" pro nil (lib "do25grid.pro" nil "sacha") "%s, file" (nil ("amax") ("amin")))
+   ("do25grid" pro nil (lib "do25grid.pro" nil "sacha") "%s" (nil ("amax") ("amin") ("clean") ("distance") ("execute") ("help") ("L_star") ("offset") ("R_in") ("R_out") ("rho") ("Rootdir")))))

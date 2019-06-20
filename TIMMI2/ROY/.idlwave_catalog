@@ -1,0 +1,24 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("align_spectra" pro nil (lib "align_spectra.pro" nil "sacha") "%s, refspectrum, spectrum, name, masterlun" (nil))
+   ("OneD_real_shift" fun nil (lib "timmi2_shift_procedures.pro" nil "sacha") "Result = %s(in, dx)" (nil))
+   ("timmi2s_rectify" fun nil (lib "timmi2_shift_procedures.pro" nil "sacha") "Result = %s(in)" (nil ("slit")))
+   ("timmi2_1D_fitshift_fitfunction" fun nil (lib "timmi2_shift_procedures.pro" nil "sacha") "Result = %s(p)" (nil))
+   ("timmi2_1D_fitshift" fun nil (lib "timmi2_shift_procedures.pro" nil "sacha") "Result = %s(i1, i2)" (nil ("slit") ("xbuf") ("xsize") ("ybuf") ("ysize")))
+   ("timmi2_2D_shift" fun nil (lib "timmi2_shift_procedures.pro" nil "sacha") "Result = %s(in, dx, dy)" (nil))
+   ("timmi2_2D_fitshift_fitfunction" fun nil (lib "timmi2_shift_procedures.pro" nil "sacha") "Result = %s(p)" (nil))
+   ("timmi2_2D_fitshift" fun nil (lib "timmi2_shift_procedures.pro" nil "sacha") "Result = %s(i1, i2)" (nil ("center") ("edgesize") ("size")))
+   ("timmi_all" pro nil (lib "timmi_all.pro" nil "sacha") "%s, listname" (nil))
+   ("timmi2s_shiftadd" fun nil (lib "timmi2s_shiftadd.pro" nil "sacha") "Result = %s(basename)" (nil ("fits_out") ("journal") ("masterfile") ("Nimage") ("skip")))
+   ("timmi2_2D_shift" fun nil (lib "timmi2_2D_shift.pro" nil "sacha") "Result = %s(in, dx, dy)" (nil))
+   ("outmes" pro nil (lib "others.pro" nil "sacha") "%s, message" (nil ("infow")))
+   ("timmi2s_disp_offset" fun nil (lib "others.pro" nil "sacha") "Result = %s(dy)" (nil ("coeff")))
+   ("fff" fun nil (lib "others.pro" nil "sacha") "Result = %s(in)" (nil))
+   ("n2s" fun nil (lib "others.pro" nil "sacha") "Result = %s(in)" (nil ("format")))
+   ("default" pro nil (lib "others.pro" nil "sacha") "%s, var, value" (nil))
+   ("construct_header" fun nil (lib "construct_header.pro" nil "sacha") "Result = %s(head0, head2)" (nil))))

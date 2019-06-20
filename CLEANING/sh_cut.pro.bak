@@ -1,0 +1,47 @@
+FUNCTION line2index,a,line
+  tmp = sh_select(a,a.data.line EQ line)
+  md = median(tmp.data.wave)
+  CASE 1 OF
+    (md LT 2.6): return, 1
+    (md LT 3.0): return, 2
+    (md LT 3.5): return, 3
+    (md LT 4.1): return, 4
+    (md LT 5.3): return, 5
+    (md LT 7.0): return, 6
+    (md LT 12.5): return, 7
+    (md LT 16.5): return, 9
+    (md LT 19.5): return, 10
+    (md LT 27.5): return, 11
+    (md LT 29.0): return, 12
+    ELSE: return, 13
+  END
+END
+
+FUNCTION sh_cut,ain,edges=edges
+
+  IF (n_elements(edges) lt 1) THEN BEGIN
+    edges = [ [0,0], $
+              [2.38,2.62],[2.6,3.02],[3.0,3.52],[3.5,4.1], $
+              [4.08,5.32],[5.3,7.05],[7.0,12.5], $
+              [0,0], $
+              [12.45,16.55],[16.35,19.55],[19.5,27.55],[27.5,29.0], $
+              [28.9,45.2] $
+            ]
+  ENDIF
+  
+  a = ain
+  
+  line = sh_uniq(a.data.line)
+;  line = line(sort(line))
+;  line =line(uniq(line))
+  
+  FOR i = 0, n_elements(line)-1 DO BEGIN
+    j = line2index(a,line(i))
+    a = sh_select(a,(a.data.line NE line(i)) OR $
+                  ((a.data.wave GT edges(0,j)) AND $
+                  (a.data.wave LT edges(1,j))) $
+                 )
+  ENDFOR
+
+  return,a
+END

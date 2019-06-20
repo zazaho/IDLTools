@@ -1,0 +1,10 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("sh_read_kurucz" fun nil (lib "sh_read_kurucz.pro" nil "sacha") "Result = %s(file)" (nil ("logg") ("pad") ("temp")))
+   ("read_hnu" fun nil (lib "read_kurucz.pro" nil "sacha") "Result = %s(num)" (nil))
+   ("read_kurucz" fun nil (lib "read_kurucz.pro" nil "sacha") "Result = %s(t, g, z)" (nil ("abund") ("allwave") ("logg") ("models") ("num") ("teff")))))

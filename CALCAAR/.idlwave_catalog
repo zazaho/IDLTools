@@ -1,0 +1,19 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("shc_array2aar" fun nil (lib "sh_calcaar.pro" nil "sacha") "Result = %s(p)" (nil ("status")))
+   ("sh_calcaar" fun nil (lib "sh_calcaar.pro" nil "sacha") "Result = %s(in)" (nil ("add") ("cgs") ("divi") ("factor") ("flambda") ("help") ("lafl") ("lflux") ("log") ("lwave") ("mult") ("nu") ("offset") ("plambda") ("poly") ("quiet") ("shift") ("smooth") ("subt") ("watt")))
+   ("smo" fun nil (lib "smo.pro" nil "sacha") "Result = %s(in, insmo)" (nil ("_extra")))
+   ("subtract" fun nil (lib "subtract.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("_extra")))
+   ("add" fun nil (lib "add.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("_extra")))
+   ("plambda" fun nil (lib "plambda.pro" nil "sacha") "Result = %s(in, inplambda)" (nil ("_extra")))
+   ("div" fun nil (lib "div.pro" nil "sacha") "Result = %s(in, indiv)" (nil ("_extra")))
+   ("de_kurucz" fun nil (lib "de_kurucz.pro" nil "sacha") "Result = %s(aar)" (nil ("MODEL")))
+   ("offset" fun nil (lib "offset.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("_extra")))
+   ("fact" fun nil (lib "fact.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("_extra")))
+   ("multiply" fun nil (lib "multiply.pro" nil "sacha") "Result = %s(p1, p2)" (nil ("_extra")))
+   ("sh_calcline" fun nil (lib "sh_calcline.pro" nil "sacha") "Result = %s(aar, line)" (nil ("_extra")))))

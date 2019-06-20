@@ -1,0 +1,10 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("plot_vdveen_habing" pro nil (lib "plot_vdveen_habing.pro" nil "sacha") "%s" (nil ("_extra") ("names") ("regions")))
+   ("plot_colors" pro nil (lib "plot_colors.pro" nil "sacha") "%s, data" (nil ("_extra") ("max_error") ("newplot") ("plot_aver") ("plot_err")))
+   ("pltrack" pro nil (lib "pltrack.pro" nil "sacha") "%s, tracks" (nil ("_extra") ("c12") ("c25") ("deltat") ("idx") ("mdot") ("mgs") ("number") ("times") ("verbose")))))

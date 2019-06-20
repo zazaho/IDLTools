@@ -1,0 +1,14 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("sh_int" fun nil (lib "sh_int.pro" nil "sacha") "Result = %s(in)" (nil ("quiet") ("xrange")))
+   ("sh_inttab" fun nil (lib "sh_inttab.pro" nil "sacha") "Result = %s(wave, flux)" (nil))
+   ("jb_integrate" fun nil (lib "jb_integrate.pro" nil "sacha") "Result = %s(lam, f)" (nil ("distance")))
+   ("sh_integrate_jy_kms" fun nil (lib "sh_integrate_jy_kms.pro" nil "sacha") "Result = %s(fnu, vel)" (nil ("lambda0")))
+   ("sh_integrate" fun nil (lib "sh_integrate.pro" nil "sacha") "Result = %s(in)" (nil ("_extra") ("cont") ("help") ("noconvert") ("noplot") ("quiet") ("xrange")))
+   ("mycurvefit" fun nil (lib "mycurvefit.pro" nil "sacha") "Result = %s(x, y, weights, a, sigma)" (nil ("chi2") ("chisq") ("Function_Name") ("iter") ("itmax") ("noderivative") ("tol")))
+   ("sh_integrate_simple" fun nil (lib "sh_integrate_simple.pro" nil "sacha") "Result = %s(x, y)" (nil ("xrange")))))

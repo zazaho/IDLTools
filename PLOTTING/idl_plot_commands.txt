@@ -1,0 +1,70 @@
+Character Sets and Positioning Commands
+
+The commands to change the fonts are shown in the table below. The character following the exclamation mark can be either upper or lowercase.
+Font Command Description
+!3	Simplex Roman (default) 
+!4	Simplex Greek
+!5	Duplex Roman
+!6	Complex Roman
+!7	Complex Greek
+!8	Complex Italic
+!9(!M)	Math and special characters
+!10	Special characters
+!11(!G)	Gothic English
+!12(!W)	Simplex Script
+!13	Complex Script 
+!14	Gothic Italian
+!15	Gothic German
+!16	Cyrillic
+!17	Triplex Roman
+!18	Triplex Italic
+!20	Miscellaneous
+!X	Revert to the entry font
+Table 9.1 Vector-Drawn Character Sets
+
+Positioning Commands
+The positioning and other font-manipulation commands are described in Table 9.2.
+PositioningCommands
+Action
+!A	Shift above the division line.
+!B 	Shift below the division line.
+!C	"Carriage return," begins a new line of text. Shift back to the starting position and down one line.
+!D	Shift down to the first level subscript and decrease the character size by a factor of 0.62.
+!E	Shift up to the exponent level and decrease the character size by a factor of 0.44.
+!I	Shift down to the index level and decrease the character size by a factor of 0.44.
+!L	Shift down to the second level subscript. Decrease the character size by a factor of 0.62.
+!N	Shift back to the normal level and original character size.
+!R	Restore position. The current position is set from the top of the saved positions stack.
+!S	Save position. The current position is saved on the top of the saved positions stack.
+!U	Shift to upper subscript level. Decrease the character size by a factor of 0.62.
+!X	Return to the entry font.
+!!	Display the ! symbol.
+Table 9.2 Vector-Drawn Positioning and Miscellaneous Commands
+
+The figure below illustrates the relative positions and effects on character size of the level commands. In this figure, the letters "!N" are normal level and size characters. 
+The figure below illustrates some typical uses of the Hershey character set. 
+The command string is reproduced underneath the graphic output to show how to format complex equations. Remember, the case of the character that follows the "!" command character is ignored. To illustrate, the bottom integral term was formed by the following IDL procedure call:
+XYOUTS, 0, .2, $
+        '!MI!S!A!E!8x!R!B!Ip!N !7q!Ii!N!8U!S!E2!R!Ii!Ndx', $
+        SIZE = 3, /NORMAL
+The string may be broken down into the following components:
+!MI
+Changes to the math set and draws the integral sign, uppercase I. 
+!S
+Saves the current position on the position stack.
+!A!E!8x
+Shifts above the division line and to the exponent level, switches to the Complex Italic font (Font 8), and draws the " x."
+!R!B!Ip
+Restores the position to the position immediately after the integral sign, shifts below the division line to the index level, and draws the " p."
+!N !7q
+Returns to the normal level, advances one space, shifts to the Complex Greek font (Font 7), and draws the Greek letter rho, which is designated by "q" in this set.
+!Ii!N
+Shifts to the index level and draws the " i " at the index level. Returns to the normal level.
+!8U
+Shifts to the Complex Italic font (Font 8) and outputs the upper case " U."
+!S!E2
+Saves the position and draws the exponent " 2."
+!R!Ii
+Restores the position and draws the index " i."
+!N dx
+Returns to the normal level and outputs " dx."

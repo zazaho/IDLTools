@@ -1,0 +1,11 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("read_spec_read_data" fun nil (lib "read_spec.pro" nil "sacha") "Result = %s(filename)" (nil ("prefix")))
+   ("read_spec_Event" pro nil (lib "read_spec.pro" nil "sacha") "%s, sEvent" (nil))
+   ("read_spec" fun nil (lib "read_spec.pro" nil "sacha") "Result = %s" (nil ("command") ("database") ("no_block") ("plotwindow") ("separator")))
+   ("display_spec" pro nil (lib "display_spec.pro" nil "sacha") "%s" (nil ("_extra")))))

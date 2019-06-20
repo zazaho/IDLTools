@@ -1,0 +1,1 @@
+sws_database = read_fmr('$HOME/IA_FILES/MACHINE_READABLE/sws_database.dat')

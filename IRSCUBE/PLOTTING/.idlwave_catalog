@@ -1,0 +1,11 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("ple" pro nil (lib "ple.pro" nil "sacha") "%s, x, y" (nil ("_extra") ("dolimits") ("help") ("idx") ("omitlimits") ("symbol_width") ("x_errdown") ("x_errup") ("y_errdown") ("y_errup")))
+   ("plf" pro nil (lib "plf.pro" nil "sacha") "%s, s, x, y" (nil ("_extra") ("component") ("error") ("inspect") ("nomodel") ("noobserved")))
+   ("plr2" pro nil (lib "plr2.pro" nil "sacha") "%s, struct, var1, var2" (nil ("_extra") ("nooplot") ("smartscaling")))
+   ("plr" pro nil (lib "plr.pro" nil "sacha") "%s, ratios, var1, var2" (nil ("_extra") ("nooplot") ("smartscaling")))))

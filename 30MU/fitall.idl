@@ -1,0 +1,1 @@
+for i=0,n_elements(all30)-1 do foo=execute('c'+all30[i]+'=fit30('+all30[i]+')')

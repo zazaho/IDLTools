@@ -1,0 +1,17 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("create_convolution_kernel" fun nil (lib "create_convolution_kernel.pro" nil "sacha") "Result = %s(psfname, psfrefname)" (nil ("fftpsfref") ("hanning") ("nyquistthreshold") ("psfreffwhm")))
+   ("copy_header_params" fun nil (lib "copy_header_params.pro" nil "sacha") "Result = %s(header_in)" (nil ("sourcefile")))
+   ("median_in_circle" fun nil (lib "median_in_circle.pro" nil "sacha") "Result = %s(i, h)" (nil ("dec") ("deviation") ("ra") ("size")))
+   ("plane_funct" fun nil (lib "fitplane.pro" nil "sacha") "Result = %s(p)" (nil))
+   ("chi2_plane" fun nil (lib "fitplane.pro" nil "sacha") "Result = %s(p)" (nil))
+   ("fitplane_plane" fun nil (lib "fitplane.pro" nil "sacha") "Result = %s(d, params)" (nil ("refpix")))
+   ("fitplane" fun nil (lib "fitplane.pro" nil "sacha") "Result = %s(d)" (nil ("initial_params") ("nparams") ("out") ("refpix")))
+   ("convolve_and_reproject_map" fun nil (lib "convolve_and_reproject_map.pro" nil "sacha") "Result = %s(imgname, convolutionkernelname)" (nil ("outheader")))
+   ("stdev_noise_map" fun nil (lib "stdev_noise_map.pro" nil "sacha") "Result = %s(map)" (nil))
+   ("make_noise_map_fits" pro nil (lib "make_noise_map_fits.pro" nil "sacha") "%s, filename" (nil ("outfile")))))

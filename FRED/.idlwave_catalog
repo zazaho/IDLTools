@@ -1,0 +1,9 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("whereND" fun nil (lib "wherend.pro" nil "sacha") "Result = %s(bool, Nindex)" (nil ("COMPLEMENT") ("NCOMPLEMENT")))
+   ("reproject_image" fun nil (lib "reproject_image.pro" nil "sacha") "Result = %s(image, pfov, pfov_ref)" (nil ("NO_NORMALIZATION")))))

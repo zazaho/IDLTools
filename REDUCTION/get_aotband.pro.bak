@@ -1,0 +1,45 @@
+function get_aotband, structin, aotband
+
+if is_aar(structin) then begin
+  det=structin.data.det
+  flag=structin.data.flag
+endif
+if is_spd(structin) then begin
+  det=structin.data.det
+  flag=structin.data.det.flag
+endif
+
+if aotband eq '1a' then indx=where(test_flag(flag,order=4) eq 1,count)
+if aotband eq '1b' then indx=where((det ge 1) and (det le 12) and $
+ (test_status(structin,aperture=1) eq 1) and (test_flag(flag,order=3) eq 1),count)
+if aotband eq '1d' then indx=where((det ge 1) and (det le 12) and $
+ (test_status(structin,aperture=2) eq 1) and (test_flag(flag,order=3) eq 1),count)
+if aotband eq '1e' then indx=where((det ge 1) and (det le 12) and $
+ (test_status(structin,aperture=2) eq 1) and (test_flag(flag,order=2) eq 1),count)
+if aotband eq '2a' then indx=where((det ge 13) and (det le 24) and $
+ (test_status(structin,aperture=2) eq 1) and (test_flag(flag,order=2) eq 1),count)
+if aotband eq '2b' then indx=where((det ge 13) and (det le 24) and $
+ (test_status(structin,aperture=2) eq 1) and (test_flag(flag,order=1) eq 1),count)
+if aotband eq '2c' then indx=where((det ge 13) and (det le 24) and $
+ (test_status(structin,aperture=3) eq 1) and (test_flag(flag,order=1) eq 1),count)
+if aotband eq '3a' then indx=where((det ge 25) and (det le 36) and $
+ (test_status(structin,aperture=1) eq 1) and (test_flag(flag,order=2) eq 1),count)
+if aotband eq '3c' then indx=where((det ge 25) and (det le 36) and $
+ (test_status(structin,aperture=2) eq 1) and (test_flag(flag,order=2) eq 1),count)
+if aotband eq '3d' then indx=where((det ge 25) and (det le 36) and $
+ (test_status(structin,aperture=2) eq 1) and (test_flag(flag,order=1) eq 1),count)
+if aotband eq '3e' then indx=where((det ge 25) and (det le 36) and $
+ (test_status(structin,aperture=3) eq 1) and (test_flag(flag,order=1) eq 1),count)
+if aotband eq '4' then indx=where((det ge 37) and (det le 48) and $
+ (test_status(structin,aperture=3) eq 1) and (test_flag(flag,order=1) eq 1),count)
+
+if is_aar(structin) then $
+newstruct=define_aar(length=count,data=structin.data(indx),header=structin.header)
+if is_spd(structin) then $
+newstruct=define_spd(length=count,data=structin.data(indx),header=structin.header)
+
+return, newstruct
+
+end
+
+

@@ -1,0 +1,26 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("make_msup_residual" fun nil (lib "make_msup_residual.pro" nil "sacha") "Result = %s(data, model)" (nil ("ebv") ("mrange") ("r_v") ("scaled_model")))
+   ("read_modust3_get_dustout" pro nil (lib "read_modust3.pro" nil "sacha") "%s, file" (nil ("nwave") ("spec") ("star") ("status") ("wave")))
+   ("read_modust3" fun nil (lib "read_modust3.pro" nil "sacha") "Result = %s(dir)" (nil ("distance")))
+   ("makemsupgrid_modust" pro nil (lib "makemsupgrid.pro" nil "sacha") "%s, file" (nil ("mdot") ("R_in") ("R_out") ("R_star") ("T_star")))
+   ("makemsupgrid_dust" pro nil (lib "makemsupgrid.pro" nil "sacha") "%s, file" (nil ("frac_alo") ("frac_melilite") ("frac_mgfeo") ("frac_olivine") ("prefix")))
+   ("makemsupgrid" pro nil (lib "makemsupgrid.pro" nil "sacha") "%s" (nil ("clean") ("distance") ("execute") ("frac_melilite") ("frac_mgfeo") ("frac_olivine") ("help") ("L_star") ("Mdot") ("offset") ("prefix") ("R_in") ("R_out") ("Rootdir") ("T_star")))
+   ("msup_unred" fun nil (lib "read_msup_model.pro" nil "sacha") "Result = %s(aar)" (nil ("A_V") ("EBV") ("R_V")))
+   ("plmsup" pro nil (lib "read_msup_model.pro" nil "sacha") "%s, in" (nil ("_extra") ("data") ("modust") ("sws") ("unred")))
+   ("read_msup_match_data" fun nil (lib "read_msup_model.pro" nil "sacha") "Result = %s(model, data)" (nil ("mrange")))
+   ("read_msup_datatable" fun nil (lib "read_msup_model.pro" nil "sacha") "Result = %s" (nil ("prefix") ("status")))
+   ("read_msup_data" fun nil (lib "read_msup_model.pro" nil "sacha") "Result = %s(starname, StarTable)" (nil ("prefix")))
+   ("read_msup_model_from_path" fun nil (lib "read_msup_model.pro" nil "sacha") "Result = %s(readlines, path)" (nil ("prefix")))
+   ("read_msup_model_match_strings" fun nil (lib "read_msup_model.pro" nil "sacha") "Result = %s(sLong, sFind)" (nil))
+   ("read_msup_model_values_from_param" fun nil (lib "read_msup_model.pro" nil "sacha") "Result = %s(allparams, allvalues, param)" (nil ("numeric")))
+   ("read_msup_model_read_batch" fun nil (lib "read_msup_model.pro" nil "sacha") "Result = %s(filename)" (nil))
+   ("read_msup_model_parse_file" pro nil (lib "read_msup_model.pro" nil "sacha") "%s, alllines" (nil ("command") ("models") ("params") ("paths") ("readlines") ("separator") ("uniq_params") ("values")))
+   ("read_msup_model_Event" pro nil (lib "read_msup_model.pro" nil "sacha") "%s, sEvent" (nil))
+   ("read_msup_model" fun nil (lib "read_msup_model.pro" nil "sacha") "Result = %s(filename)" (nil ("command") ("mrange") ("no_block") ("plotwindow") ("prefix") ("separator")))
+   ("display_msup_model" pro nil (lib "display_msup_model.pro" nil "sacha") "%s, filename" (nil ("_extra")))))

@@ -1,0 +1,11 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("read_modust2" fun nil (lib "read_modust2.pro" nil "sacha") "Result = %s(file)" (nil ("distance")))
+   ("makegrid" pro nil (lib "makegrid.pro" nil "sacha") "%s" (nil ("amax") ("amin") ("deltaR") ("deltaT") ("exp_vel") ("frac_MgS") ("gas_to_dust") ("help") ("L_star") ("mdot") ("Mshell") ("R_in") ("Rootdir") ("T_star") ("time")))
+   ("get_2dimage2" pro nil (lib "get_2dimage2.pro" nil "sacha") "%s" (nil ("emi") ("file")))
+   ("read_modust" fun nil (lib "read_modust.pro" nil "sacha") "Result = %s(file)" (nil ("distance") ("star")))))

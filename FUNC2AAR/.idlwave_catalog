@@ -1,0 +1,14 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("sh_gauss" fun nil (lib "sh_gauss.pro" nil "sacha") "Result = %s(ref, x, y, w)" (nil ("center") ("height") ("janksy") ("width")))
+   ("km" fun nil (lib "km.pro" nil "sacha") "Result = %s(lambda)" (nil ("MODEL") ("PRINT")))
+   ("sh_bb" fun nil (lib "sh_bb.pro" nil "sacha") "Result = %s(aar, T, pindex)" (nil ("norm")))
+   ("syntspec" fun nil (lib "syntspec.pro" nil "sacha") "Result = %s(ref, l)" (nil))
+   ("km" fun nil (lib "km2.pro" nil "sacha") "Result = %s(lambda)" (nil ("MODEL") ("PRINT")))
+   ("bb" fun nil (lib "bb.pro" nil "sacha") "Result = %s(wave, T)" (nil ("flambda")))
+   ("sh_iras2aar" fun nil (lib "sh_iras2aar.pro" nil "sacha") "Result = %s(in)" (nil))))

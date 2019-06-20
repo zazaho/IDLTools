@@ -1,0 +1,14 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("trap_int" fun nil (lib "trap_int.pro" nil "sacha") "Result = %s(x, y)" (nil ("xrange")))
+   ("makegooddatamask" fun nil (lib "makegooddatamask.pro" nil "sacha") "Result = %s(data, unc)" (nil ("snr") ("xrange")))
+   ("where_missing" fun nil (lib "where_missing.pro" nil "sacha") "Result = %s(array, count)" (nil ("_ref_extra") ("missing")))
+   ("erratio" fun nil (lib "erratio.pro" nil "sacha") "Result = %s(aIN, bIN)" (nil ("CALIBRERROR") ("MEDIAN") ("NMC") ("SIGA") ("SIGB")))
+   ("sh_erratio" fun nil (lib "sh_erratio.pro" nil "sacha") "Result = %s(aIN, bIN)" (nil ("CALIBRERROR") ("MEDIAN") ("NMC") ("SIGA") ("SIGB")))
+   ("FILL_MISSING" pro nil (lib "fill_missing.pro" nil "sacha") "%s, ARRAY, MISSING, DIMENSION" (nil ("EXTRAPOLATE")))
+   ("applygooddatamask" fun nil (lib "applygooddatamask.pro" nil "sacha") "Result = %s(in, mask)" (nil))))

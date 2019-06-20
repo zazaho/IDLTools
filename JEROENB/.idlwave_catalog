@@ -1,0 +1,14 @@
+;;
+;; IDLWAVE catalog for library sacha
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Thu Mar 16 13:01:45 2017
+;;
+(setq idlwave-library-catalog-libname "sacha")
+(setq idlwave-library-catalog-routines
+ '(("oploterr_y" pro nil (lib "oploterr_y.pro" nil "sacha") "%s, x, y, yerr" (nil))
+   ("make_convolution" pro nil (lib "make_convolution.pro" nil "sacha") "%s, file" (nil ("back")))
+   ("extract_Q_values" pro nil (lib "extract_q_values.pro" nil "sacha") "%s" (nil))
+   ("P_CONV_GAUSS" fun nil (lib "conv_gauss.pro" nil "sacha") "Result = %s(Image0, fwhm)" (nil))
+   ("circsym" fun nil (lib "circsym.pro" nil "sacha") "Result = %s(linr)" (nil))
+   ("oploterr_x" pro nil (lib "oploterr_x.pro" nil "sacha") "%s, x, y, xerr" (nil))
+   ("feps_remove_bad_pix" pro nil (lib "feps_remove_bad_pix.pro" nil "sacha") "%s, orders_present, pl_version" (nil))))
